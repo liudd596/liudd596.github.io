@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>订单支付</title>
+    <link rel="stylesheet" href="../css/liePay.css">
+    <script>
+        refreshRem();
+        function refreshRem() {
+            var width = document.documentElement.getBoundingClientRect().width;
+            document.documentElement.style.fontSize = width / 7.5 + "px";
+        }
+    </script>
+</head>
+<body style="">
+<div id="viewport">
+    <header class="yd-header">
+        <a class="header_goback" href="javascript:history.go(-1)"><span></span></a>
+        <div class="header-title">订单支付</div>
+    </header>
+    <div class="c_main">
+        <div class="c_xx">
+            <div class="m_orderSuccess">
+                <h3>为<span>18801001815</span>充值</h3>
+                <div class="mor-con">
+                    <h2>￥<span>9.98</span>元</h2>
+                </div>
+            </div>
+        </div>
+        <div class="page-ct">
+            <div class="pac-to">请选择支付方式</div>
+            <ul class="pay-list">
+                <li class="list-item" style="display: list-item;">
+                    <a href="javascript:void(0);" class="list-link list-xin">
+                        <p class="pay-icon"></p>
+                        <div><p class="title-main">微信支付 <span class="tm-yh" style="display: none;"></span></p></div>
+                    </a>
+                </li>
+                <li class="list-item" style="display: list-item;">
+                    <a href="javascript:void(0);" class="list-link">
+                        <p class="pay-icon"></p>
+                        <div><p class="title-main">支付宝支付<span class="tm-yh" style="display: none;"></span></p></div>
+                    </a>
+                </li>
+                <li class="list-item" style="display: list-item;">
+                    <a href="javascript:void(0);" class="list-link">
+                        <p class="pay-icon"></p>
+                        <div>
+                            <p class="title-main">银联支付<span class="tm-yh" style="display: none;"></span> </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="pay-but">确认支付</a>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".pay-list").on("click",'.list-item',function(){
+            var ind=$(this).index();
+            $(this).siblings().children(".list-link").removeClass('list-xin');
+            $(this).children(".list-link").addClass('list-xin');
+            if(ind==1){
+                $(".pay-but").attr("data-id","ALIPAY")
+            }else if(ind==2){
+                $(".pay-but").attr("data-id","UNIPAY")
+            }else{
+                $(".pay-but").attr("data-id","MBP")
+            }
+        });
+    });
+</script>
+</body>
+</html>
