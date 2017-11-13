@@ -1,0 +1,215 @@
+html{font-size:62.5%; /* 10÷16=62.5% */} body{font-size:12px;font-size:1.2rem ; /* 12÷10=1.2 */} 
+body,html{
+	width:100%;
+}
+.btnPublic{
+	background-image:-webkit-linear-gradient(270deg, #ee2963, #f78168);
+	background-image:-moz-linear-gradient(270deg, #f78168, #ee2963); 
+    background-image:-o-linear-gradient(270deg, #ee2963, #f78168);
+    background-image:linear-gradient(270deg, #ee2963, #f78168);
+	background-size:100%;
+	border-radius:6px;
+	border:none;
+	font-size:14px;
+	font-size:1.4rem;
+	color:#fff;
+    display: inline-block;
+    height:36px;
+    line-height: 36px;
+    border:1px solid #fdd75b;
+    cursor: pointer;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.page-top,.page-bottom{
+	width:100%;
+	margin:0 auto;
+	position: relative;
+	left:0;
+}
+.page-top img,.page-bottom img,.pityBox img,.popColouBar img{
+	border:none;
+	vertical-align: middle;
+	display: block;
+	width:100%;
+	max-width: 100%;
+}
+.prizeBg{
+	border:none;
+	vertical-align: middle;
+	display: block;
+	width:100%;
+	max-width: 100%;
+	position:absolute;
+	left:0;
+	
+}
+.mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    filter: Alpha(Opacity=80);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+}
+.popBox{
+	width:80%;
+	padding:0 10%;
+	background-size:cover;
+	background-size:100%;
+	display: none;
+	z-index: 99999;
+}
+.pityBox{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    display: none;
+    z-index:12000;
+}
+.pityBox h3{
+	font-size: 24px;
+    font-size: 2.4rem;
+    position: absolute;
+    top:24%;
+    width:100%;
+    margin-bottom: 4%;
+    text-align: center;
+}
+.content-tip{
+	font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 28px;
+    position: absolute;
+    top:34%;
+    width:100%;
+    text-align: center;
+}
+.popColouBar{
+	width:100%;
+	background-size:cover;
+	background-size:100%;
+	display: none;
+	z-index: 99998;
+	
+}
+.popContent{
+	height:auto;
+    min-height:210px;
+	background:#e70011;
+	border:4px solid #fdd75b;
+	text-align: center;
+	font-size:20px;
+	font-size:2rem;
+	color:#fff;
+	padding-top:45%;
+}
+.popContent p{
+	font-size:18px;
+	font-size:1.8rem;
+}
+.tip{
+	font-size:14px;
+	font-size:1.4rem;
+	width:98%;
+	text-align: left;
+	display: inline-block;
+	margin:2px 0;
+}
+.popCloseBtn{
+	background:url('../images/close-bg.png')no-repeat;
+	background-size:100%; 
+	display: block;
+	width:36px;
+	height:36px;
+	max-width: 60%;
+	position:absolute;
+	right:28px;
+	top:-18px;
+	z-index:999;
+}
+.btnArea {
+	width:80%;
+	padding: 0 10%;
+	text-align: center;
+	margin:20px 0;
+	height: 36px;
+}
+.btnArea a{
+	width:46%;
+}
+.popMesArea{
+	width: 80%;
+    padding: 0 10%;
+    text-align: center;
+    margin-bottom:20px;
+}
+.phoneArea,.codeArea,.confirmBtnArea{
+	height:62px;
+}
+.phoneArea input{
+	width:98%; 
+}
+.codeArea input{
+	width:46%;
+}
+.confirmBtnArea input{
+	width:98%; 
+}
+/*转盘样式*/
+.turnplate-bg{
+	width:76%;
+	padding:0 12%;
+	position: absolute;
+	top:30%;
+	left:0;
+	
+}
+.turnplate-pointer{
+	width:30%;
+	padding:0 33.6%;
+	position: absolute;
+	top:44%;
+	left:0;
+}
+.turnplate-slide{
+	width:78%;
+	padding:0 11%;
+	position: absolute;
+	top:94%;
+	left:0;
+}
+/*轮播信息*/
+.notice_active {
+    float: left;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+}
+.notice_active li{
+	list-style-type:none;
+	overflow: hidden;
+	text-align: center;
+	}
+.notice_active li.notice_active_ch span {
+	color:#ffbe04;
+	font-size:1.4rem;
+	display: block;
+	overflow: hidden; 
+	width:100%;
+	float: left;
+	overflow: hidden;
+	height: 36px;
+    line-height: 36px;
+}
+
+

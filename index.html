@@ -1,26 +1,183 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+<title>幸运大转盘</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="css/reset.css" rel="stylesheet" />
+<link href="css/turnPlate.css" rel="stylesheet" />
+<script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.rotate.min.js"></script>
+<script src="js/turnplate.js?v=1.0"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="js/sha.js"></script>
+<style type="text/css">
+    #cover {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 99999;
+        background-color: #000000;
+        opacity: 0.7;
+    }
 
-  <meta charset="UTF-8">
+    #guide {
+        display: none;
+        position: absolute;
+        right: 18px;
+        top: 5px;
+        z-index: 99999;
+    }
 
-  <title>js制作自动打字删字的动画效果</title>
+    #guide img {
+        width: 300px;
+        height: 200px;
+    }
+</style>
 
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<script>
+var errcode = -1;
+var jsapiTicket = '';
+var code;
+var InterValObj; //timer变量，控制时间
+var count = 60; //间隔函数，1秒执行
+var curCount; //当前剩余秒数
+var code; //当前剩余秒数
+function getCode() {
+    //alert(showPosition(latitude, longitude));
+    var Phone = $("#phoneVal").val()
+    if (Phone == "") {
+        alert("手机号码不能为空");
+        return;
+    }
+    //验证数据库中是否有该用户
+    $.ajax({
+        url: "../turnplate/Exists",
+        data: { phone: Phone },
+        type: "POST",
+        success:
+                function (data) {
+                    if (data == "1") {
+                        alert("该手机号已经参与过活动")
+                        $("#getcode").attr("disabled", true);
+                        $('.popBox').hide();
+                        $('.popColouBar').hide();
+                        $('#mask').remove();
+                    } else if (data == "p_no") {
+                        alert("虚拟号段不能参与活动")
+                    }else {
+                        curCount = count;
+                        InterValObj = window.setInterval(setRemainTime, 1000);
+                        $.ajax({
+                            url: "../turnplate/GetCode",
+                            data: { phone: Phone },
+                            type: "POST",
+                            success:
+                                    function (data) {
+                                        if (data != "-1" && data != "phone") {
+                                            code = data;
+                                        }
+                                        else if (data == "phone") {
+                                            alert("请正确输入手机号！");
+                                        } else if (data == "-1") {
+                                            alert("5分钟获取验证码不能超过3次");
+                                        }
+                                    }
+                        });
+                    }
+                }
+    });
+}
+function setRemainTime() {
+    if (curCount > 0) {
+        //  $('#error7').attr('style', 'display:none');
+        $('#getcode').css('background-color', '#ee296');
+        $('#getcode').attr('disabled', 'disabled');
+        $('#getcode').val('' + curCount + '秒');
+        curCount--;
+    } else if (curCount == 0) {
+        window.clearInterval(InterValObj); //停止计时器
+        $('#getcode').val('重新发送');
+        $('#getcode').removeAttr('disabled');
+        $('#getcode').css('background-color', '#ee296');
+        //  $('#error7').removeAttr('style');
+    }
+}
 
-  <link rel="stylesheet" href="css/normalize.css">
-
-  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
-
+</script>
 </head>
-
 <body>
-
-  <h1>打字删除字体特效：  <span class="txt-rotate fw700" data-period=500" data-rotate='[ "&lt;832646&gt;几行代码，沟通世界！&lt;832646&gt;" ]'></span></h1>
-
-  <script src="js/index.js"></script>
-
+<div class="page-top">
+    <img src="images/turnplate-top.png" />
+    <div class="turnplate-bg">
+        <img src="images/turnplate-bg1.png" />
+    </div>
+    <div class="turnplate-pointer">
+        <img src="images/turnplate-pointers.png" class="playbtn" />
+    </div>
+    <div class="turnplate-slide">
+        <div class="notice_active">
+            <ul>
+                <li class="notice_active_ch">
+                    <span>恭喜186****2458 抽中&nbsp;100M&nbsp;流量</span>
+                </li>
+                <li class="notice_active_ch">
+                    <span>恭喜185****6041抽中&nbsp;100M&nbsp;流量</span>
+                </li>
+                <li class="notice_active_ch">
+                    <span>恭喜177****7319 抽中&nbsp;100M&nbsp;流量</span>
+                </li>
+                <li class="notice_active_ch">
+                    <span>恭喜186****2458 抽中&nbsp;58元&nbsp;平台代金券</span>
+                </li>
+                <li class="notice_active_ch">
+                    <span>恭喜132****4318抽中&nbsp;300M&nbsp;流量</span>
+                </li>
+                <li class="notice_active_ch">
+                    <span>恭喜186****0714 抽中&nbsp;100M&nbsp;流量</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="page-bottom">
+    <img src='images/turnplate-bottom1.jpg' />
+</div>
+<!--彩带-->
+<div class="popColouBar">
+    <img src="images/turnplate-carbonbg.png" />
+</div>
+<!--中奖提示-->
+<div class="popBox">
+    <img src="images/popbox-bg.png" class="prizeBg" />
+    <a class="popCloseBtn" onclick="closePopbox()"></a>
+    <div class="popContent">
+        <div class="popText">
+        </div>
+        <div class="btnArea">
+            <a class="btnPublic" id="turnplate-getbtn">立即领取</a>
+            <!--<a class="btnPublic fr" id="turnplate-sharebtn" onclick="_system._guide(true);">炫耀一下</a>-->
+        </div>
+        <div class="popMesArea">
+        </div>
+        <div style="font: 0px/0px sans-serif;clear: both;display: block"> </div>
+    </div>
+</div>
+<!--遗憾-->
+<div class="pityBox">
+    <img src="images/pity-bg.png" class="pityPic" />
+    <a class="popCloseBtn" onclick="closeRegretbox()"></a>
+    <h3 class='title-tip'></h3>
+    <div class="content-tip"></div>
+</div>
+<input id="openid" type="hidden" value=""  />
+<!--分享指引遮罩层-->
+<div id="cover"></div>
+<div id="guide"><img src="images/guide1.png" /></div>
 </body>
-
 </html>
