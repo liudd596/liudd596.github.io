@@ -8,6 +8,7 @@
     </style>
 </head>
 <body>
+<div style="position: fixed;bottom: 10px;right: 10px;border: 1px solid red" class="goto-top">返回顶部!</div>
 <h1 style="margin: 40px; font: 32px Microsoft Yahei; text-align: center;">简单的JavaScript图像延迟加载库Echo.js演示</h1>
 <div class="menu">
     <a class="cur" href="./">演示1</a>
@@ -23,10 +24,15 @@
     <img class="lazy" src="images/blank.gif" data-echo="images/big-7.jpg">
 </div>
 <script src="js/echo.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
 <script>
     Echo.init({
         offset: 0,
         throttle: 0
+    });
+   //返回頂部
+    $('.goto-top').click(function() {
+        $('html,body').animate({ scrollTop: '0px' }, 900);
     });
 </script>
 </body>
