@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>充值记录</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no">
+    <link type="text/css" rel="stylesheet" href="../css/base.css">
+    <link type="text/css" rel="stylesheet" href="../css/recharge.css">
+</head>
+<body class="max-body">
+<header class="page-head"><a class="icon-return" onclick="window.history.go(-1)"></a>充值记录</header>
+<div class="mgt-52 pos-r">
+    <div class="tabscont js_tabscont" id="page-content-ebank">
+        <div class="box on pd-10 show-forever bord-b2">
+            <div class="page-content" id="page-content-card">
+                <div id="phonenum_div" class="stc-recharge-phone-card">
+                    <div class="stc-recharge-input stc-common-inline ">
+                        <input class="stc-common-inline" name="phonenum" id="phonenum" maxlength="11" type="text" placeholder="请输入11位手机号码">
+                        <p><button class="btn-blue-rm" onclick="step1();">查询</button></p>
+                    </div>
+                </div>
+            </div>
+            <p class="mgl-10 fs-8 ta-left fc-red" id="index_errorTip" style="display: none">亲，请输入正确的手机号</p>
+        </div>
+        <p class="mgt-10 fs-7 c-666 pdl-5">充值历史</p>
+        <p class="mgt-10 fs-7 c-666 pdl-5" style="display: none">暂无记录</p>
+        <div class="rechargeBill" style="display: none">
+            <div class="rechargeBill-lf mgt-10 pd-5">
+                <p><span class="span1">13718017521</span><span class="span2">国内流量</span><span class="span3">10M</span><span class="span4">2017-09-11</span><span class="span5">充值成功</span></p>
+                <p><span class="span1">13718017521</span><span class="span2">国内流量</span><span class="span3">10M</span><span class="span4">2017-09-11</span><span class="span5">充值中</span></p>
+                <p><span class="span1">13718017521</span><span class="span2">国内流量</span><span class="span3">10M</span><span class="span4">2017-09-11</span><span class="span5">充值失败</span></p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.js"></script>
+<script src="../js/index.js"></script>
+</body>
+</html>
