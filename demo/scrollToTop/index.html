@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{height: 2200px}
+        .toTop {
+            position: fixed; right: 20px; bottom: 20px; margin-bottom: 20px; cursor: pointer; width: 0; height: 0; border-top: 30px solid transparent; border-bottom: 60px solid #3498db; border-left: 30px solid transparent; border-right: 30px solid transparent;
+        }
+        .rule-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .rule {
+            height: 100px;
+            width: 10%;
+            line-height: 100px;
+            text-align: center;
+            color: #fff;
+        }
+        .rule1 {background-color: #1abc9c;}
+        .rule2 {background-color: #2ecc71;}
+        .rule3 {background-color: #3498db;}
+        .rule4 {background-color: #9b59b6;}
+        .rule5 {background-color: #34495e;}
+        .rule6 {background-color: #f1c40f;}
+        .rule7 {background-color: #e67e22;}
+        .rule8 {background-color: #e74c3c;}
+        .rule9 {background-color: #bdc3c7;}
+    </style>
+
+</head>
+<body>
+<span id="top" class="toTop" style="opacity: 0;"></span>
+<ul id="rule-list" class="rule-list">
+    <li class="rule rule1">100px</li>
+    <li class="rule rule2">200px</li>
+    <li class="rule rule3">300px</li>
+    <li class="rule rule4">400px</li>
+    <li class="rule rule5">500px</li>
+    <li class="rule rule6">600px</li>
+    <li class="rule rule7">700px</li>
+    <li class="rule rule8">800px</li>
+    <li class="rule rule9">900px</li>
+    <li class="rule rule10">1000px</li>
+</ul>
+<script src="scrollTop.js"></script>
+<script>
+    var toTop = new ScrollToTop("#top", {
+        // 滚动条向下滑动多少时，出现回到顶部按钮
+        showWhen: 100,
+        // 回到顶部的速度。
+        speed: 100,
+        // 元素淡入和淡出的速度
+        fadeSpeed: 10
+    });
+    //当要兼容 IE7 的时候，不能传入选择符字符串，直接传入元素
+//    var topElement = document.getElementById("top");
+//    var toTop = new ScrollToTop(topElement)
+</script>
+</body>
+</html>
