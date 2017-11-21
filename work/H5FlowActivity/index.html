@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>云讯科技_流量红包</title>
+    <link href="js/artDialog/css/ui-dialog.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/css.css"/>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+<div class="modal-backdrop"></div>
+    <div class="headtop">
+        <img src="img/top.jpg">
+    </div>
+    <div class="main">
+        <!--<h2>请输入手机，以便为您发放流量红包。</h2>-->
+        <input type="number" id="flowPhone" placeholder="请输入您的手机号码" />
+        <p class="error" id='error1' style="display: none">请输入正确的手机号</p>
+        <div onclick="content_Dialog1();"><img src="img/btn1.png" alt=""/></div>
+    </div>
+    <div class="cont_text"><img src="img/cont_text.jpg" alt=""/></div>
+    <div class="footer">
+        <div class="infooter" id="infooter">
+            <div class="hot">获奖记录</div>
+            <input type="number" id="historyPhone" placeholder="请输入您的手机号码" />
+            <p class="error" id='error2' style="display: none">请输入正确的手机号</p>
+            <div onclick="content_Dialog2();"><img src="img/btn2.png" alt=""/></div>
+            <div class="topRec_List">
+                <dl>
+                    <dd>领取号码</dd>
+                    <dd>领取时间</dd>
+                    <dd>领取规格</dd>
+                </dl>
+                <div class="maquee">
+                    <ul class="ul_scroll">
+                        <li>
+                            <div>139****9890</div>
+                            <div>4月11日 17:32</div>
+                            <div>10M流量</div>
+                        </li>
+                        <li>
+                            <div>139****9890</div>
+                            <div>4月12日 17:32</div>
+                            <div>100M流量</div>
+                        </li>
+                        <li>
+                            <div>139****9890</div>
+                            <div>4月13日 17:32</div>
+                            <div>1000M流量</div>
+                        </li>
+                        <li>
+                            <div>139****9890</div>
+                            <div>4月14日 17:32</div>
+                            <div>1G流量</div>
+                        </li>
+                        <li>
+                            <div>139****9890</div>
+                            <div>4月15日 17:32</div>
+                            <div>100M流量</div>
+                        </li>
+                        <li>
+                            <div>139****9890</div>
+                            <div>4月16日 17:32</div>
+                            <div>1000M流量</div>
+                        </li>
+                        <li>
+                            <div>139****9890</div>
+                            <div>4月17日 17:32</div>
+                            <div>1G流量</div>
+                        </li>
+                        <li>
+                            <div>139****9890</div>
+                            <div>4月18日 17:32</div>
+                            <div>100M流量</div>
+                        </li>
+                        <li>
+                            <div>139****9890</div>
+                            <div>4月19日 17:32</div>
+                            <div>1000M流量</div>
+                        </li>
+                        <!--<li>-->
+                            <!--<div>139****9890</div>-->
+                            <!--<div>4月20日 17:32</div>-->
+                            <!--<div>1G流量</div>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">版权所有2011-2016 北京云讯科技有限公司 京ICP备14002087号-7</p>
+    </div>
+    <div class="content_Dialog1 content_Dialog" style="display: none">
+        <div class="close">
+            <button class="ui-dialog-close" onclick="closePop1();">×</button>
+            <div class="Dialog_bg">
+                <p class="Dialog_bg_p1">恭喜您抢到<span>10M</span>流量红包！</p>
+                <p class="Dialog_bg_p2">您的<span>10M</span>流量<br/>已经申请成功</p>
+            </div>
+            <div class="content_Dialog_btn" ><a href="#infooter"><img src="img/btn3.png" alt="" onclick="closePop1();"/></a></div>
+        </div>
+    </div>
+    <div class="content_Dialog2 content_Dialog" style="display: none">
+        <div class="close">
+            <button class="ui-dialog-close2" onclick="closePop2()">×</button>
+             <div class="Dialog_bg">
+               <div style="display: none"><span>您还没有参加活动呦！</span></div>
+                <div style="display: none">
+                    <span class="Dialog_bg_p1">10M流量</span>
+                    <span class="Dialog_bg_p2">4月14日17:32</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    function autoScroll(obj){      //autoScroll自动滚动
+        $(obj).find("ul").animate({
+            marginTop : "-.16rem"
+        },500,function(){
+        $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);    //appendTo在每个 this 元素结尾插入内容
+        })
+    }
+    $(function(){
+        
+        setInterval('autoScroll(".maquee")',3000); //setInterval() 方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭。由 setInterval() 返回的 ID 值可用作 clearInterval() 方法的参数。
+    })
+
+</script>
+
+<script src="js/Flow_activity.js" language="JavaScript" type="text/javascript"></script>
+</body>
+</html>
