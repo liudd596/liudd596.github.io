@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>闹元宵猜灯谜</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="description" content="闹元宵猜灯谜赢流量">
+    <meta name="keywords" content="闹元宵猜灯谜赢流量，讯众股份">
+	<link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+<form runat="server">
+<div class="modal-backdrop" id="modal-backdrop" style="display:none;"></div>
+<div class="wrap">
+    <div class="voice_music" style="z-index:2000;position:absolute;top:10px;right:10px">
+        <audio id="music" src="happynewyear.mp3" autoplay="autoplay" loop>你的浏览器不支持audio标签。</audio>
+        <a id="audio_btn"><img src="img/play.png" width="32" height="32" id="music_btn" border="0"></a>
+    </div>
+	<div class="box01" id="wbegin">
+		<div class="start_btn" id="start"></div>
+	</div>
+	<div class="box02" id="main" style="display:none;">
+        <div class="rule" id="rule" style="display:block;">
+            <div class="close" id="close"></div>
+            <div class="rule_data"></div>
+        </div>
+		<div class="question">
+			<h3 id="ques_title" class="ques_title">第1题</h3>
+			<p id="question" class="ques_title_cont"></p>
+		</div>
+		<div class="answer">
+			<ul id="selects_box">
+				<li id="s_0" class="cell"></li>
+				<li id="s_1" class="cell"></li>
+			</ul>
+		</div>
+        <div class="time"><span>10</span> 秒</div>
+		<p id="tips"></p>
+	</div>
+	<div class="box03" id="wend" style="display:none;">
+        <div class="result" id="result">
+            <div class="result-flow" id="result-flow"></div>
+            <div class="btn-flow" id="btn-flow"></div>
+        </div>
+	</div>
+    <div class="box04" id="lead_flow" style="display:none;">
+        <h3 class="total_title">领 取 流 量</h3>
+        <div class="page-content" id="page-content-card">
+
+            <div id="phonenum_div" class="stc-recharge-phone-card">
+                <div class="stc-recharge-input stc-common-inlineyzm ">
+                    <input class="stc-common-inline phonenum" name="phonenum" id="phonenum" maxlength="11" type="tel"  placeholder="请输入11位手机号码">
+                </div>
+            </div>
+
+            <div id="phonenum_div" class="stc-recharge-yzm">
+                <div class="stc-recharge-input-yzm">
+                    <input type="text" class="stc-common-inline yzm" maxlength="5" ID="txtpiccode" placeholder="短信验证码">
+                </div>
+                <p><button class="btn-blue-yzm">获取</button></p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="error_form"></div>
+            <div id="phonenum_div" class="stc-recharge-btn">
+                <div class="btn-flow2" id="btn-flow2" onclick="LoginSubmit()"></div>
+            </div>
+        </div>
+    </div>
+    <div class="box05" id="win_flow" style="display:none;">
+        <h3 class="total_title">领 取 成 功</h3>
+        <p class="win_flow_p">恭喜您提交成功，我们将会在24小时内为您充值，请您随时关注流量提醒短信</p>
+    </div>
+    <div class="box06 ewm" id="QR_code" style="display:none;">
+        <h3 class="total_title">关注公众号</h3>
+        <div class="ewm-con">
+            <p class="win_flow_p">关注公众号猜灯谜，赢流量</p>
+            <img src="img/ewm.png" alt="">
+            <p class="win_flow_p">长按识别二维码，<br>更多流量等你拿回家</p>
+        </div>
+    </div>
+    <div class="box07" id="record" style="display:none;">
+        <h3 class="total_title">答 题 记 录</h3>
+        <div class="record_con">
+            <ul>
+              <li class="record_con_li1">&nbsp;</li>
+              <li>猜对题数</li>
+              <li>流量</li>
+              <li>按钮</li>
+            </ul>
+            <ul>
+              <li class="record_con_li1">1.</li>
+              <li id="record_answer1"></li>
+              <li id="record_answer2"></li>
+              <li id="record_lqu" class="record_lqu">领取</li>
+            </ul>
+        </div>
+        <div class="record_last"><p>注意：只能领取第一次答题获得的流量哦！</p></div>
+    </div>
+</div>
+</form>
+<!--loading开始-->
+<div id="loading">
+    <div class="cont">
+        <div id="content">
+            <span>Loading...</span>
+        </div>
+    </div>
+    <div class="coverDiv"></div>
+</div>
+<!--loading结束-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
+
