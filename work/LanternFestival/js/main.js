@@ -171,16 +171,18 @@ function loading(){
     }
 }
 
+var music = document.getElementById("music");
+var music_btn=document.getElementById('music_btn');
 //ios音频播放
-var shakeMusic = document.getElementById("shakeMusic");
+//var shakeMusic = document.getElementById("shakeMusic");
 // 微信提供的事件，微信浏览器内部初始化完成后
 document.addEventListener("WeixinJSBridgeReady", function () {
-    shakeMusic.load();
+    music.load();
 }, false);
 // 监听手机声音
 window.addEventListener('shake', shakeEventDidOccur, false);
 function shakeEventDidOccur(obj) {
-    shakeMusic.play();
+    music.play();
 }
 
 // function more() {
