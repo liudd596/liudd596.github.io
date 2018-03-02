@@ -366,7 +366,7 @@ $("#record_lqu").on('touchend', function() {
     $d('lead_flow').style.display = "block";
 });
 //手机验证
-var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(14[1-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+var mobile = /^1(3[0-9]|4[0-9]|5[0-9]|66|7[0-9]|8[0-9]|9[8-9])\d{8}$/;
 function LoginSubmit() {
     var phonenum = $("#phonenum").val();
     var yzmCode = $("#txtpiccode").val();
