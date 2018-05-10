@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>流量充值</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no">
+    <link type="text/css" rel="stylesheet" href="../../Content/css/base.css">
+    <link type="text/css" rel="stylesheet" href="../../Content/css/recharge.css">
+    <!--Font Awesome [ OPTIONAL ]-->
+    <link rel="stylesheet" href="../../Content/plugins/font-awesome/css/font-awesome.min.css">
+</head>
+<body class="max-body">
+<div class="box on pd-10 show-forever bg_white pos-r">
+    <div class="page-content mgl-6" id="page-content-card">
+        <div class="stc-recharge-phone-card">
+            <div class="stc-recharge-input  ">
+                <input class="stc-common-inline" name="phonenum" id="phonenum" maxlength="11" type="number" placeholder="请输入手机号">
+            </div>
+        </div>
+        <div class="hg30">
+            <div class="stc-recharge-belong"><img class="lang-flag" src="../../Content/images/yid.png" alt="" width="12"/><span class="lang-name">北京移动</span></div>
+            <p class="fs-7 ta-left fc-red" style="display: none">亲，请输入正确的手机号</p>
+        </div>
+        <div style="position: absolute;right: 4%;top: 3%;">
+            <img class="img-circle img-user media-object" src="../../Content/images/av1.png" alt="" width="56"/>
+        </div>
+    </div>
+
+    <div style="overflow:hidden;height: 250px">
+        <div class="page-flow">
+            <ol class="mgt-10" style="width: 200%;">
+                <ul class="page-flow-ulone">
+                    <li class="page-share" onclick="content_Dialog();"><i class="fa fa-share-square-o fa-lg" aria-hidden="true"></i></li>
+                    <li class="page-con">
+                        <div style="font-size: 22px">1G</div>
+                        <div>
+                            <span style="font-size: 16px"><i class="fa fa-cny" aria-hidden="true"></i>&nbsp;6.99</span>
+                            <span class="mgl-10" style="text-decoration:line-through;"><i class="fa fa-cny" aria-hidden="true"></i>&nbsp;15</span>
+                        </div>
+                        <div style="font-size: 14px">省内可用&nbsp;&nbsp;·&nbsp;&nbsp;3天有效</div>
+                        <a href="Charge-details.html" style="width: 80%;height: 30px;border: 1px solid #fff;border-radius: 4px;text-align: center;line-height: 30px;font-size: 16px;margin-top: 20px;display: block;color: #fff"><span>买</span></a>
+                    </li>
+                </ul>
+                <ul class="page-flow-ultwo mgl-20">
+                    <li class="page-share" onclick="content_Dialog();"><i class="fa fa-share-square-o fa-lg" aria-hidden="true"></i></li>
+                    <li class="page-con">
+                        <div style="font-size: 22px">1G</div>
+                        <div>
+                            <span style="font-size: 16px"><i class="fa fa-cny" aria-hidden="true"></i>&nbsp;3.99</span>
+                            <span class="mgl-10" style="text-decoration:line-through;"><i class="fa fa-cny" aria-hidden="true"></i>&nbsp;22</span>
+                        </div>
+                        <div style="font-size: 14px">全国可用&nbsp;&nbsp;·&nbsp;&nbsp;当天有效</div>
+                        <a style="width: 80%;height: 30px;border: 1px solid #666;border-radius: 4px;text-align: center;line-height: 30px;font-size: 16px;margin-top: 20px;display: block;color: #666"><span>买</span></a>
+                    </li>
+                </ul>
+            </ol>
+        </div>
+    </div>
+
+    <!--Tab切换-->
+    <div id="tabbox">
+        <ul class="tabs" id="tabs">
+            <li><a href="#" tab="tab1" style="border-right: 2px solid #e5e5e5;">全国通用</a></li>
+            <li><a href="#" tab="tab2">省内可用</a></li>
+        </ul>
+        <ul class="tab_conbox" id="tab_conbox">
+            <li id="tab1" class="tab_con">
+                <div class="stc-recharge-amount-area">
+                    <div class="stc-common-inline bg-blue"><p class="stc-common-p1">10M</p><p class="stc-common-p2">3.00元</p></div>
+                    <div class="stc-common-inline bg-blue"><p class="stc-common-p1">10M</p><p class="stc-common-p2">3.00元</p></div>
+                    <div class="stc-common-inline bg-gray"><p class="stc-common-p1">10M</p><p class="stc-common-p2">3.00元</p></div>
+                </div>
+                <div class="clearfix"></div>
+            </li>
+            <li id="tab2" class="tab_con">
+                <div class="stc-recharge-amount-area" >
+                    <div class="stc-common-inline bg-blue"><p class="stc-common-p1">20M</p><p class="stc-common-p2">4.00元</p></div>
+                    <div class="stc-common-inline bg-blue"><p class="stc-common-p1">20M</p><p class="stc-common-p2">4.00元</p></div>
+                    <div class="stc-common-inline bg-gray"><p class="stc-common-p1">20M</p><p class="stc-common-p2">4.00元</p></div>
+                </div>
+                <div class="clearfix"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--------------------分 享---------------->
+<div class="modal-backdrop"></div>
+<div class="content_Dialog">
+    <div class="close">
+        <p class="cd-fl">分享优惠给朋友们</p>
+        <a class="ui-dialog-close" onclick="closePop();">×</a>
+        <div class="weixin-share">
+            <i class="fa fa-weixin" aria-hidden="true" style="font-size: 60px;margin-top: 26px"></i>
+            <p class="weixin-share-p">分享至群和好友</p>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../../Content/js/jquery.js"></script>
+<!----------------------Tab切换---------------->
+<script src="../../Content/js/mySystem.js"></script>
+<script>
+    $(document).ready(function() {
+        jQuery.jqtab = function(tabtit,tabcon) {
+            $(tabcon).hide();
+            $(tabtit+" li:first").addClass("thistab").show();
+            $(tabcon+":first").show();
+            $(tabtit+" li").mouseover(function() {
+                $(tabtit+" li").removeClass("thistab");
+                $(this).addClass("thistab");
+                $(tabcon).hide();
+                var activeTab = $(this).find("a").attr("tab");
+                $("#"+activeTab).fadeIn();
+                return false;
+            });
+        };
+        /*调用方法如下：*/
+        $.jqtab("#tabs",".tab_con");
+
+    });
+    function content_Dialog() {
+        $(".modal-backdrop").css("display", "block");
+        $(".content_Dialog").show();
+    }
+    function closePop() {
+        $(".modal-backdrop").css("display", "none");
+        $(".content_Dialog").hide();
+    }
+
+</script>
+</body>
+</html>

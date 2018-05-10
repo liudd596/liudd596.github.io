@@ -1,0 +1,63 @@
+img {vertical-align: middle;}
+.stc-recharge-phone-card{width:60%;background-color:#fff;border-bottom:solid #cfd6da 2px;padding:5px 0;margin-bottom:6px;margin-top:10px;text-align:left;position:relative}
+.stc-recharge-belong{width:100%;height:20px;line-height:20px;vertical-align:top;text-align:left;color:#f98a04}
+.stc-recharge-input input{border:none;font-family:"Microsoft YaHei",Tahoma,Arial;font-size:24px;height:50px;line-height:50px;width:90%;color: #2198d4;font-weight: bold;letter-spacing: 1px;}
+.img-circle {border-radius: 50%;}
+.img-user {width: 66px;height:66px;border: 4px solid #ffffff;box-shadow: 0 0 4px 4px rgba(247,247,247,0.6);}
+.media-object {display: block;}
+.lang-flag {display: inline-block;padding: 3px 5px 3px 0;}
+.lang-name {display: inline-block;vertical-align: middle;}
+#phonenum::-webkit-input-placeholder{color: #2198d4;font-size: 26px;font-weight: bold;letter-spacing: 1px;}
+.stc-common-inline .stc-common-p2{line-height:10px;font-size:12px}
+.stc-recharge-amount-area{width:100%;padding:0px 0% 0 2.5%;margin-bottom:10px;font-size:16px}
+.stc-recharge-amount-area div{width:28.5%;height:60px;line-height:40px;font-size:16px;margin-bottom:10px;margin-right: 2%;border-radius:4px;text-align:center;font-weight: bold;}
+
+/*-----------------------------tab 切换---------------------------*/
+#tabbox{margin-top: 20px}
+.tabs{height: 32px;width: 100%;margin: 10px auto; position: relative;left: -12px;}
+.tabs li{float:left;overflow: hidden;position: relative;}
+.tabs li a {display: block;padding: 0 20px;outline: none;color: #666666;font-size: 16px;letter-spacing: 1px;font-weight: bold}
+.tabs li a:hover {color: #2198d5}
+.tabs .thistab a,.tabs .thistab a:hover{color: #2198d5;font-weight: bold}
+.tab_con {display:none;font-size: 16px;}
+.tab_con_div{float: left;margin-left:44px;}
+.tab_con_div a{color: #666666;}
+.tab_con_div .tab_con_div_p1{text-align: center}
+.tab_con_div .tab_con_div_p2{text-align: right;color: #989898;}
+
+
+.page-flow{width: 100%;overflow-x: scroll;overflow-y: hidden;margin-left: 10px;height: 280px}
+.page-flow-ulone{width: 220px;height: 220px;float: left;box-shadow:0 0px 10px rgba(241, 241, 241, .7);border-radius: 4px;position: relative;color: #fff;
+    background: -webkit-linear-gradient(left top, #6cd5fb, #1e95d2); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(bottom right, #6cd5fb, #1e95d2); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(bottom right, #6cd5fb, #1e95d2); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to bottom right, #6cd5fb, #1e95d2); /* 标准的语法（必须放在最后） */  }
+.page-flow-ultwo{width: 220px;height: 220px;float: left;background: #fff;box-shadow:0 0px 10px rgba(241, 241, 241, .7);border-radius: 4px;position: relative;color: #666666;}
+ .page-con{margin-top: 40px;margin-left: 18px}
+ .page-con div{margin: 14px 10px;}
+.page-flow-ulone .page-share{color: #299cd6;width:32px;height:32px;font-size: 12px;background: #fff;border-radius: 32px;text-align: center;line-height: 32px;position: absolute;right: 4%;top: 4%;}
+.page-flow-ultwo .page-share{color: #666;width:32px;height:32px;font-size: 12px;border-radius: 32px;text-align: center;line-height: 32px;position: absolute;right: 5%;top: 5%;border: 1px solid #6c6c6c;}
+
+.content_Dialog{display: none;width: 100%;height: auto;background: #fff;z-index: 1100;position: fixed;bottom: 0px}
+.modal-backdrop {display: none;position: fixed;top: 0;right: 0;bottom: 0;left: 0;background-color: #000;opacity: 0.3;z-index: 1000;}
+.close{position: relative;}
+.ui-dialog-close {position:absolute;top:-2px;right: 6%;font-size: 28px;color: #9b9b9b;}
+.cd-fl{text-align: center;font-size: 18px;color: #666666;margin: 20px 0;}
+.weixin-share{width: 160px;height: 160px;border: 1px solid #e5e5e5;margin: 60px auto 100px;text-align: center;border-radius: 4px}
+.fa-weixin{color: #333333;text-align: center;line-height: 130px}
+.weixin-share-p{font-size: 16px;margin-top: 20px;color: #333333;}
+
+.bg-gray {
+    border: solid #9e9e9e 2px;
+    color: #9e9e9e;
+}
+.bg-blue {
+    border: solid #2198d5 2px;
+    color: #2198d5;
+}
+
+
+
+
+
+
