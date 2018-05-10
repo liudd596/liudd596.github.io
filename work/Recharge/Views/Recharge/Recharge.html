@@ -16,8 +16,8 @@
 <div class="box on pd-10 show-forever bg_white pos-r">
     <div class="page-content mgl-6" id="page-content-card">
         <div class="stc-recharge-phone-card">
-            <div class="stc-recharge-input  ">
-                <input class="stc-common-inline" name="phonenum" id="phonenum" maxlength="11" type="number" placeholder="请输入手机号">
+            <div class="stc-recharge-input">
+                <input class="stc-common-inline" name="phonenum" id="phonenum" maxlength="13" type="tel" placeholder="请输入手机号">
             </div>
         </div>
         <div class="hg30">
@@ -132,6 +132,23 @@
         $(".modal-backdrop").css("display", "none");
         $(".content_Dialog").hide();
     }
+
+
+
+    $("#phonenum").keyup(function() {
+        if (this.value.length > 10) {
+            $(this).val(doFilter(this.value));
+        }
+    });
+
+    function doFilter(value) {
+        var temp = [];
+        temp[0] = value.slice(0, 3);
+        temp[1] = value.slice(3, 7);
+        temp[2] = value.slice(7);
+        return temp.join(" ");
+    }
+
 
 </script>
 </body>
