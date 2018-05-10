@@ -134,21 +134,20 @@
     }
 
 
-
-    $("#phonenum").keyup(function() {
-        if (this.value.length > 10) {
-            $(this).val(doFilter(this.value));
-        }
-    });
-
-    function doFilter(value) {
-        var temp = [];
-        temp[0] = value.slice(0, 3);
-        temp[1] = value.slice(3, 7);
-        temp[2] = value.slice(7);
-        return temp.join(" ");
+    window.onload = function() {
+        var the_input = document.getElementById("phonenum");
+        the_input.onkeydown = check;
+        the_input.onkeypress = check;
+        the_input.onkeydown = check;
     }
+    function check(event) {
+        event ? event : window.event;
+        var text_len = this.value.length;
+        if ((text_len === 3 || text_len === 8) && event.keyCode !== 8) {
 
+            this.value += " ";
+        }
+    };
 
 </script>
 </body>
