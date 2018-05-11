@@ -26,7 +26,7 @@ img {vertical-align: middle;}
 .tab_con_div .tab_con_div_p2{text-align: right;color: #989898;}
 
 
-.page-flow{width: 100%;overflow-x: scroll;overflow-y: hidden;height: 240px;padding-left: 10px}
+.page-flow{width: 100%;overflow-x: scroll;overflow-y: hidden;height: 240px;}
 .page-flow-ulone{width: 200px;height: 200px;float: left;box-shadow:0 0px 10px rgba(241, 241, 241, .7);border-radius: 4px;position: relative;color: #fff;
     background: -webkit-linear-gradient(left top, #6cd5fb, #1e95d2); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(bottom right, #6cd5fb, #1e95d2); /* Opera 11.1 - 12.0 */
