@@ -1,7 +1,13 @@
+@font-face {
+    font-family: 'DINNextSlabPro-Bold';
+    src:url('../plugins/font-awesome/fonts/DINNextSlabPro-Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 img {vertical-align: middle;}
 .stc-recharge-phone-card{width:70%;background-color:#fff;border-bottom:solid #cfd6da 2px;padding:5px 0;margin-bottom:6px;margin-top:10px;text-align:left;position:relative}
 .stc-recharge-belong{width:100%;height:20px;line-height:20px;vertical-align:top;text-align:left;color:#f98a04}
-.stc-recharge-input input{border:none;font-family:"Microsoft YaHei",Tahoma,Arial;font-size:28px;height:50px;line-height:50px;width:100%;color: #2198d4;font-weight: bold;letter-spacing: 1px;}
+.stc-recharge-input input{border:none;font-family:"DINNextSlabPro-Bold",Tahoma,Arial;font-size:28px;height:50px;line-height:50px;width:100%;color: #2198d4;font-weight: bold;letter-spacing: 1px;}
 .img-circle {border-radius: 50%;}
 .img-user {width: 66px;height:66px;border: 4px solid #ffffff;box-shadow: 0 0 4px 4px rgba(247,247,247,0.6);}
 .media-object {display: block;}
@@ -26,7 +32,7 @@ img {vertical-align: middle;}
 .tab_con_div .tab_con_div_p2{text-align: right;color: #989898;}
 
 
-.page-flow{width: 100%;overflow-x: scroll;overflow-y: hidden;height: 240px;}
+.page-flow{width: 100%;overflow-x: scroll;overflow-y: hidden;height: 240px;margin-left: 10px}
 .page-flow-ulone{width: 200px;height: 200px;float: left;box-shadow:0 0px 10px rgba(241, 241, 241, .7);border-radius: 4px;position: relative;color: #fff;
     background: -webkit-linear-gradient(left top, #6cd5fb, #1e95d2); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(bottom right, #6cd5fb, #1e95d2); /* Opera 11.1 - 12.0 */
