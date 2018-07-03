@@ -1,0 +1,470 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>隐号宝</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow" />
+    <link rel="shortcut icon" href="img/bitbug_favicon48.ico" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-customize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/pages.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <script language="javascript" src="http://lzt.zoosnet.net/JS/LsJS.aspx?siteid=LZT19968005&float=1&lng=cn"></script>
+</head>
+<body>
+<header>
+    <div class="modal-backdrop"></div>
+    <!--右侧浮窗 start-->
+    <div id="floating_window">
+        <div class="infloating">
+            <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();;return false;" title="在线咨询"><div class="floating"><img src="img/floating1.jpg" alt=""/></div></a>
+            <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();;return false;" title="在线咨询"><div class="floating"><img src="img/floating2.jpg" alt=""/></div></a>
+            <a href="javascript:void(0)" onclick="alertTip()"><div class="floating"><img src="img/floating3.jpg" alt=""/></div></a>
+            <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();;return false;" title="在线咨询"><div class="floating"><img src="img/floating4.jpg" alt=""/></div></a>
+        </div>
+    </div>
+    <!--PC导航 start-->
+    <div class="container">
+        <div class="logo"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li class="menu_li2">
+                    <a><span>业务模式</span> <i class="ico menu_ico"></i></a>
+                    <div class="dropdown-menu_li1" style="display: none">
+                        <div class="hidden_content">
+                            <a href="num-middle.html"><span class="ico menu_ico_center1"></span><span>中间号</span></a>
+                            <a href="num-post.html"><span class="ico menu_ico_center2"></span><span>岗位号</span></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="application-scene.html"><span>应用场景</span></a></li>
+                <li><a href="experience.html"><span>体验中心</span></a></li>
+                <li><a href="about-us.html"><span>关于我们</span></a></li>
+            </ul>
+        </div>
+        <!-- 移动端菜单 -->
+        <a href="javascript:;" class="mbtn js-menu"></a>
+    </div>
+</header>
+<!--移动导航 start-->
+<div class="navi">
+    <div class="mask"></div>
+    <div class="hd">
+        <!--<p><a href="index.html">首页</a></p>-->
+        <p><a href="javascript:;" onclick="$('#subm-1').toggle()">语音</a><i></i></p>
+        <div class="subm" id="subm-1">
+            <p><a href="YTX-chanpi/voice_inform.html">语音通知</a></p>
+            <p><a href="YTX-chanpi/voice_code.html">语音验证码</a></p>
+            <p><a href="YTX-chanpi/two-way_calls.html">双向呼叫</a></p>
+            <p><a href="YTX-chanpi/voice_calls.html">语音通话</a></p>
+        </div>
+        <p><a href="javascript:;" onclick="$('#subm-2').toggle()">短信</a><i></i></p>
+        <div class="subm" id="subm-2">
+            <p><a href="YTX-chanpi/sms_notify.html">短信通知</a></p>
+            <p><a href="YTX-chanpi/verification_code.html">短信验证码</a></p>
+        </div>
+        <p><a href="javascript:;" onclick="$('#subm-3').toggle()">流量</a><i></i></p>
+        <div class="subm" id="subm-3">
+            <p><a href="YTX-chanpi/flow_distribution.html">流量分发</a></p>
+        </div>
+        <p><a href="javascript:;" onclick="$('#subm-4').toggle()">呼叫中心</a><i></i></p>
+        <div class="subm" id="subm-4">
+            <p><a href="ZM-chanpi/yixiaoxinghujiaozhongxin.html">营销型呼叫中心</a></p>
+            <p><a href="ZM-chanpi/kefuxinghujiaozhongxin.html">客服型呼叫中心</a></p>
+            <p><a href="ZM-chanpi/dianjihujiao.html">点击呼叫</a></p>
+            <p><a href="ZM-chanpi/zhinengyuyindaohang.html">智能语音导航</a></p>
+            <p><a href="ZM-chanpi/zhinengyuyinzhijian.html">智能语音质检</a></p>
+        </div>
+        <p><a href="javascript:;" onclick="$('#subm-5').toggle()">多方会议</a><i></i></p>
+        <div class="subm" id="subm-5">
+            <p><a href="JSH-chanpi/phoneMeeting.html">电话会议</a></p>
+            <p><a href="http://meeting.commchina.net/netmeeting.php">视频会议</a></p>
+        </div>
+        <p><a class="m-xiangq">查看更多详情，请打开电脑浏览器<br />“http://www.commchina.net/”</a><i class="m-xiangi"  onclick="$('.navi').hide()"></i></p>
+    </div>
+</div>
+<!-------------------------------------- 头部结束 -------------------------------------->
+<!-------------------------------------- 内容开始 -------------------------------------->
+<div class="ui-headview" style="background-image: url(img/BG-experience.jpg);"></div>
+<div class="ui-fullpart"  style="background-image: url(img/experience-bgcon.png); height:auto;padding:0">
+    <div class="container">
+        <div class="ui-title">
+            <div class="ht40"></div>
+            <h3>立即体验</h3>
+        </div>
+        <div class="ht50"></div>
+        <div class="ui-list-call">
+            <ul>
+                <li>
+                    <a class="i">
+                        <div class="ct">
+                            <p>商务号（AX）</p>
+                            <p>AX即单号单绑模式。可以将一个中间号码X固定分配给一个手机号。任何人拨打X即可转接到A。</p>
+                            <p>适用行业：房产中介、二手车、平台类应用，以用户呼入为主。</p>
+                            <p>特点：号码资源量高，单边保密。</p>
+                            <p onclick="content_Dialog1();"><span class="button">立即体验</span></p>
+                        </div>
+                        <img src="img/experience-con1.png" alt="" >
+                    </a>
+                </li>
+                <li>
+                    <a class="i">
+                        <div class="ct">
+                            <p>商务分机号（AXN）</p>
+                            <p>AX+中的X+为分机号形式。是用一个中间号码X+分机号可以分配给任意手机号码。拨打X+分机号即可联系到对应的A。</p>
+                            <p>适用行业：招聘、二手车、平台类应用，以用户呼入为主。</p>
+                            <p>特点：只需一个号码即可解决大量业务，单边保密。</p>
+                            <p onclick="content_Dialog2();"><span class="button">立即体验</span></p>
+                        </div>
+                        <img src="img/experience-con2.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a class="i">
+                        <div class="ct">
+                            <p>关系号（AXB）</p>
+                            <p>AXB为单号双绑。可以将一个中间号码X分配给A和B组成一对关系。AB双方可以通过X互相联系对方，第三方无法呼通X。</p>
+                            <p>适用行业：出行、物流、在线咨询。</p>
+                            <p>特点：号码复用性高，需要的号码资源量较低，双边保密。</p>
+                            <p onclick="content_Dialog3();"><span class="button">立即体验</span></p>
+                        </div>
+                        <img src="img/experience-con3.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a class="i">
+                        <div class="ct">
+                            <p>商务关系号（AXYB）</p>
+                            <p>AXYB涉及两个中间号X和Y。是商务号（商务分机号）和关系号的组合形式。B拨打X（X+分机号）转接到A，号显为Y；A拨打Y转接到B，号显为X。</p>
+                            <p>适用行业：房产中介、二手车等。</p>
+                            <p>特点：组合灵活，号码资源量主要看X的选择，双边保密。</p>
+                            <p onclick="content_Dialog4();"><span class="button">立即体验</span></p>
+                        </div>
+                        <img src="img/experience-con4.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a class="i">
+                        <div class="ct">
+                            <p>“找到我” 挪车卡</p>
+                            <p>基于隐号宝中间号技术，挪车者只要扫描卡片上的二维码，就能通过中间号与车主取得联系，双方真实号码不泄露</p>
+                            <p>适用行业：房产中介、二手车等。</p>
+                            <p>特点：组合灵活，号码资源量主要看X的选择，双边保密。</p>
+                            <p onclick="openZoosUrl();LR_HideInvite();;return false;" title="在线咨询"><span class="button">立即体验</span></p>
+                        </div>
+                        <img src="img/experience-con5.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a class="i">
+                        <img src="img/experience-con6.png" alt="">
+                    </a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="ht55"></div>
+<div class="ui-fullpart" style="background-image: url(img/footer_bg.jpg); height: 400px;padding:0;text-align: center">
+    <div class="ht55"></div>
+    <P class="text-p1">咨询服务详情</P>
+    <p class="text-p1">请致电或在线问询售前顾问</p>
+    <div class="ht40"></div>
+    <div class="hgroup" style="top: 80%">
+        <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();;return false;" class="bluebg"><img
+                src="img/ico-xx.png" alt=""> 在线咨询</a>
+        <a href="javascript:void(0)" onclick="alertTip()" class="bluebg"><img
+                src="img/ico-phon.png" alt=""> 电话咨询</a>
+    </div>
+</div>
+
+<!---------------------------------------------------体 验 弹 窗-------------------------------------------------------------->
+<!--电话咨询弹窗 start-->
+<div id="Dialog-con" >
+    <div class="custom_banner_text">
+        <button class="ui-dialog-close2" onclick="closePop()">×</button>
+        <div class="text1" style="margin-top: 20px;">
+            <h2> 在线客服</h2>
+            <h3>“400-0707-600”</h3>
+            <div class="div1"></div>
+            <p class="ban_p">客服中心收到您的号码后会及时与您联系，欢迎体验！</p>
+            <form id="userInfoFrm" name="userInfoFrm" method="post">
+                <div class="group">
+                    <div class="error" id="regularyz" style="display: none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="phone_error">手机号码格式不正确，请重新输入</span></div>
+                    <input type="text" name="" id="sxhjsrc" class="input1 border-red" placeholder="请输入您的手机号码" onblur="return check(this)">
+                    <i class="num"></i>
+                </div>
+                <div class="group">
+                    <div class="error" style=" margin-top:10px;display: none" id="yzmyz" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="yzmerror">验证码不正确，请重新输入</span></div>
+                    <input type="text" name="imgCode" class="input2" id="sxhjyzm" placeholder="请输入验证码" style=" margin-top:10px;">
+                    <span id="sxhj"></span>
+                </div>
+                <div class="item">
+                    <p class="fl">手机直接输入号码。如：1863216****；<br>
+                        座机前加区号，如：0108858****；<br>
+                        提交号码后，请您接收到我们的回电</p>
+                    <a class="btn_join fr" onclick="sxhj()">免费咨询</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--电话咨询弹窗 end-->
+<!-------------商务号（AX）start------------->
+<div class="content_Dialog1 content_Dialog" style="display:none;">
+    <button class="ui-dialog-close" onclick="closePop1();">×</button>
+    <p class="p1" style="width: 150px;margin: 20px auto;"> 商务号（AX）</p>
+    <p class="p2">模拟场景：房产中介<span class="col53">(例如：为避免飞单，为每个经纪人分配一个工作用的商务号)</span></p>
+    <div class="group" style="margin-top: 80px;position: relative;">
+        <span class="span1">手机号码</span><input type="tel" class="input1" id="yhbdst" placeholder="请输入手机号码" maxlength="11" onblur="return check(this)" />
+        <div class="error" style="display: none"><span>请输入11位正确的手机号码</span></div>
+    </div>
+    <div class="group">
+        <span class="span2" style="margin-left:12px">验证码</span><input type="text" class="input2" id="yzm" placeholder="验证码" style=" margin-top:1px;"/>
+        <a href="javascript:void(0);" style="position: relative;top: -4px">
+            <img id="clickthis" src="validates.ashx?f=yzm" style="border-radius: 4px;border: 1px solid #898989; background:#ccc;" width="100" height="30" onclick="javascript:var rn=Math.random();this.src='validates.ashx?f=yzm&ra='+rn;"/>
+        </a>
+        <div class="error"  style="display: none"><span>请输入正确的验证码</span></div>
+    </div>
+    <button class="btn" onclick="step1();">立即体验</button>
+    <p class="kindly">温馨提示：同一个手机号允许每个模式一天体验一次</p>
+</div>
+<div class="step1 content_Dialog step" style="display:none;">
+    <button class="ui-dialog-close" onclick="closePop_step1();">×</button>
+    <p class="p1" style="width: 150px;margin: 20px auto;">商务号（AX）</p>
+    <p class="p3">恭喜您，已生成商务号<span class="col3ea">18917931270</span></p>
+    <p class="p4">生成的号码有效期为10分钟，请尽快拨打</p>
+    <div class="yhbao">
+        <p class="p4" style="font-size: 16px">咨询房源</p>
+        <div class="yhbaocon">
+            <img src="img/yhb-icon1.jpg" alt=""/>
+            <p class="yhbaop1">任意号码</p>
+            <p class="yhbaop2" style="width:136px">*体验仅支持手机号</p>
+        </div>
+        <div class="yhbaocon"><img src="img/yhb-icon.jpg" alt=""/></div>
+        <div class="yhbaocon">
+            <img src="img/yhb-icon2.jpg" alt=""/>
+            <p class="yhbaop1">商务号</p>
+            <p class="yhbaop3">18917910917</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <p class="p3">请注意<span class="col3ea"> 经纪人号码 </span>将接收到<span class="col13b"> 商务号 </span>转接的来电</p>
+    <button class="btn">使用咨询</button>
+</div>
+<!-------------商务号（AX）end------------->
+<!-------------商务分机号（AX+）start------------->
+<div class="content_Dialog2 content_Dialog" style="display:none;">
+    <button class="ui-dialog-close" onclick="closePop2();">×</button>
+    <p class="p1" style="width:200px;margin: 20px auto;"> 商务分机号（AXN）</p>
+    <p class="p2">模拟场景：二手车交易平台<span class="col53">(例如：防止交易脱离平台，平台为每个经销商分配商务分机号)</span></p>
+    <div class="group" style="margin-top: 80px">
+        <span class="span1">经销商号码</span><input type="tel" class="input1" id="yyyzmphone" placeholder="请输入手机号码" maxlength="11" onblur="return check(this)" />
+        <div class="error" style="display: none"><span>请输入11位正确的手机号码</span></div>
+    </div>
+    <div class="group">
+        <span class="span2" style="margin-left: 24px;">验证码</span><input type="text" class="input2" id="yzm" placeholder="验证码" style=" margin-top:1px;"/>
+        <a href="javascript:void(0);" style="position: relative;top: -4px">
+            <img id="clickthis" src="validates.ashx?f=yzm" style="border-radius: 4px;border: 1px solid #898989; background:#ccc;" width="100" height="30" onclick="javascript:var rn=Math.random();this.src='validates.ashx?f=yzm&ra='+rn;"/>
+        </a>
+        <div class="error"  style="display: none"><span>请输入正确的验证码</span></div>
+    </div>
+    <button class="btn" onclick="step2();">立即体验</button>
+    <p class="kindly">温馨提示：同一个手机号允许每个模式一天体验一次</p>
+</div>
+<div class="step2 content_Dialog step" style="display:none;">
+    <button class="ui-dialog-close" onclick="closePop_step2();">×</button>
+    <p class="p1" style="width:200px;margin: 20px auto;">商务分机号（AXN）</p>
+    <p class="p3">恭喜您，已生成商务号<span class="col3ea">18917931270</span></p>
+    <p class="p4">生成的号码有效期为10分钟，请尽快拨打</p>
+    <div class="yhbao">
+        <p class="p4" style="font-size: 16px">咨询房源</p>
+        <div class="yhbaocon">
+            <img src="img/yhb-icon1.jpg" alt=""/>
+            <p class="yhbaop1">任意号码</p>
+        </div>
+        <div class="yhbaocon"><img src="img/yhb-icon.jpg" alt=""/></div>
+        <div class="yhbaocon">
+            <img src="img/yhb-icon2.jpg" alt=""/>
+            <p class="yhbaop1">商务号</p>
+            <p class="yhbaop3">18917910917</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <p class="p3">请注意<span class="col3ea"> 经纪商号码 </span>将接收到<span class="col13b"> 商务分机号 </span>转接的来电</p>
+    <button class="btn">使用咨询</button>
+</div>
+<!-------------商务分机号（AX+）ehd------------->
+<!-------------关系号（AXB） start------------->
+<div class="content_Dialog3 content_Dialog" style="display: none">
+    <button class="ui-dialog-close" onclick="closePop3();">×</button>
+    <p class="p1" style="width:200px;margin: 20px auto;"> 关系号（AXB）</p>
+    <p class="p2">模拟场景：二手车交易平台<span class="col53">(例如：防止交易脱离平台，平台为每个经销商分配商务分机号)</span></p>
+    <div class="group" style="margin-top: 80px">
+        <div><span class="span1">司机号码</span><input type="tel" class="input1" id="sjphone" placeholder="请输入手机号码" maxlength="11" onblur="return check(this)" /></div>
+        <div class="error error1" style="display: none"><span>请输入11位正确的手机号码</span></div>
+        <div style="margin-top: 10px"><span class="span1">乘客号码</span><input type="tel" class="input1" id="ckphone" placeholder="请输入手机号码" maxlength="11" onblur="return check(this)" /></div>
+        <div class="error error2" style="display: none"><span>请输入11位正确的手机号码</span></div>
+    </div>
+    <div class="group">
+        <span class="span2" style="margin-left: 12px;">验证码</span><input type="text" class="input2" id="yzm" placeholder="验证码" style=" margin-top:1px;"/>
+        <span id="yhb"></span>
+        <a href="javascript:void(0);" style="position: relative;top: -4px; right: 20px;">
+            <img id="clickthis" src="validates.ashx?f=yzm" style="border-radius: 4px;border: 1px solid #898989; background:#ccc;" width="100" height="30" onclick="javascript:var rn=Math.random();this.src='validates.ashx?f=yzm&ra='+rn;"/>
+        </a>
+        <div class="error"  style="display: none"><span>请输入正确的验证码</span></div>
+    </div>
+    <button class="btn" onclick="step3();">立即体验</button>
+    <p class="kindly">温馨提示：同一个手机号允许每个模式一天体验一次</p>
+</div>
+<div class="step3 content_Dialog step" style="display: none">
+    <button class="ui-dialog-close" onclick="closePop_step3();">×</button>
+    <p class="p1" style="width:200px;margin: 20px auto;"> 关系号（AXB）</p>
+    <p class="p3">恭喜您，已生成商务号<span class="col3ea">18917931270</span></p>
+    <p class="p4">生成的号码有效期为10分钟，请尽快拨打</p>
+    <div class="yhbao">
+        <p class="p4" style="font-size: 16px">咨询房源</p>
+        <div class="yhbaocon">
+            <img src="img/yhb-icon3.jpg" alt=""/>
+            <p class="yhbaop1">司机号码</p>
+            <p class="yhbaop2">18201415159</p>
+        </div>
+        <div class="yhbaocon"><img src="img/yhb-icon.jpg" alt=""/></div>
+        <div class="yhbaocon">
+            <img src="img/yhb-icon2.jpg" alt=""/>
+            <p class="yhbaop1">商务号</p>
+            <p class="yhbaop3">18917910917</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <p class="p3">请注意<span class="col3ea"> 乘客号码 </span>将接收到<span class="col13b"> 关系号 </span>转接的来电</p>
+    <p class="p4">来电显示一个关系号，不显示来电方的真实号码</p>
+    <button class="btn" style="margin: 20px auto 60px">使用咨询</button>
+</div>
+<!-------------关系号（AXB） ehd------------->
+<!-------------商务关系号（AXYB） start------------->
+<div class="content_Dialog4 content_Dialog" style="display: none;">
+    <button class="ui-dialog-close" onclick="closePop4();">×</button>
+    <p class="p1" style="width: 200px;margin: 20px auto;"> 商务关系号（AXYB）</p>
+    <p class="p2">模拟场景：房产中介<span class="col53">(例如：为避免飞单，为每个经纪人分配一个工作用的商务号)</span></p>
+    <p class="p4">该模式下不显示通话双方的真实号码</p>
+    <div class="group" style="margin-top: 30px">
+        <span class="span1">经销商号码</span><input type="tel" class="input1" id="jshm" placeholder="请输入手机号码" maxlength="11" onblur="return check(this)" />
+        <div class="error" style="display: none"><span>请输入11位正确的手机号码</span></div>
+    </div>
+    <div class="group">
+        <span class="span2" style="margin-left:24px">验证码</span><input type="text" class="input2" id="yzm" placeholder="验证码" style=" margin-top:1px;"/>
+        <a href="javascript:void(0);" style="position: relative;top: -4px">
+            <img id="clickthis" src="validates.ashx?f=yzm" style="border-radius: 4px;border: 1px solid #898989; background:#ccc;" width="100" height="30" onclick="javascript:var rn=Math.random();this.src='validates.ashx?f=yzm&ra='+rn;"/>
+        </a>
+        <div class="error"  style="display: none"><span>请输入正确的验证码</span></div>
+    </div>
+    <button class="btn" onclick="step4();">立即体验</button>
+    <p class="kindly">温馨提示：同一个手机号允许每个模式一天体验一次</p>
+</div>
+<div class="step4 content_Dialog step" style="display:none;">
+    <button class="ui-dialog-close" onclick="closePop_step4();">×</button>
+    <p class="p1" style="width: 200px;left:240px;"> 商务关系号（AXYB）</p>
+    <p class="p3">恭喜您，已生成商务号<span class="col3ea">18917931270</span></p>
+    <p class="p4">生成的号码有效期为10分钟，请尽快拨打</p>
+    <div class="yhbao yhbao-axyb">
+        <div class="yhbaocon yhbaocon-axyb">
+            <img src="img/yhb-icon5.jpg" alt=""/>
+            <p class="yhbaop1" style="line-height: 16px;font-size: 14px">经纪人号码A</p>
+            <p class="yhbaop2" style="width:136px">18813116328</p>
+        </div>
+        <div class="yhbaocon yhbaocon-axybs">
+            <img src="img/yhb-icons.jpg" alt=""/>
+            <p class="yhbaop1" style="line-height: 16px;font-size: 14px">关系号Y号码</p>
+            <p class="yhbaop2">17755874458</p>
+        </div>
+        <div class="yhbaocon yhbaocon-axyb">
+            <img src="img/yhb-icon6.jpg" alt=""/>
+            <p class="yhbaop1" style="line-height: 16px;font-size: 14px">客户B<br/>显示的是X号码</p>
+            <p class="yhbaop3">17425841258</p>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="yhbaocon yhbaocon-axyb">
+            <img src="img/yhb-icon5.jpg" alt=""/>
+            <p class="yhbaop1" style="line-height: 16px;font-size: 14px">客户号码B</p>
+            <p class="yhbaop3" style="width:136px">18311394078</p>
+        </div>
+        <div class="yhbaocon yhbaocon-axybs">
+            <img src="img/yhb-icons.jpg" alt=""/>
+            <p class="yhbaop1" style="line-height: 16px;font-size: 14px">关系号X号码</p>
+            <p class="yhbaop3">17425841258</p>
+        </div>
+        <div class="yhbaocon yhbaocon-axyb">
+            <img src="img/yhb-icon6.jpg" alt=""/>
+            <p class="yhbaop1" style="line-height: 16px;font-size: 14px">经纪人A<br/>显示的是Y号码</p>
+            <p class="yhbaop2">17755874458</p>
+        </div>
+    </div>
+
+    <p class="p5">请注意经纪人拨打Y号码 <span class="col3ea"> 17755874458 </span>到客户，但客户显示的是X号码<span class="col13b"> 17425841258 </span></p>
+    <p class="p5">客户拨打X号码  <span class="col3ea"> 17425841258 </span>到经纪人，但经纪人显示的是Y号码<span class="col13b"> 17755874458 </span></p>
+    <p class="p4">来电显示为X和Y关系号，不显示来电方的真实号码</p>
+    <button class="btn" style="margin: 20px auto 60px">使用咨询</button>
+</div>
+<!-------------商务关系号（AXYB） end------------->
+<!-------------体验次数 start------------->
+<div class="step5 content_Dialog step" style="display: none">
+    <button class="ui-dialog-close" onclick="closePop_step5();">×</button>
+    <img src="img/peomuch.jpg" alt="" style="display: block;margin:100px auto 40px"/>
+    <p class="p3">您今天的体验次数已经上限，请明天再试~</p>
+    <p class="kindly">温馨提示：同一个手机号允许每个模式一天体验一次</p>
+</div>
+<div class="step6 content_Dialog step" style="display: none">
+    <button class="ui-dialog-close" onclick="closePop_step6();">×</button>
+    <img src="img/peomuch2.jpg" alt="" style="display: block;margin:100px auto 40px"/>
+    <p class="p3">目前体验人数过多，请稍后再试~</p>
+    <p class="kindly">温馨提示：同一个手机号允许每个模式一天体验一次</p>
+</div>
+<!-------------体验次数 snd------------->
+
+<!-------------------------------------- 内容结束 -------------------------------------->
+<!-------------------------------------- 尾部开始 -------------------------------------->
+<div id="footeri">
+    <div class="container">
+        <div class="info">
+            <div class="ht20"></div>
+            <p>
+                <a href="chanpi/gongsijianjie.html">首页 </a>
+                <span>|</span>
+                <a href="chanpi/lianxiwomen.html"> 业务模式 </a>
+                <span>|</span>
+                <a href="chanpi/lianxiwomen.html"> 应用场景 </a>
+                <span>|</span>
+                <a href="chanpi/lianxiwomen.html"> 关于我们 </a>
+            </p>
+            <div class="ht25"></div>
+            <p>2011-2017 北京云讯科技有限公司 京ICP备14002087号-7</p>
+        </div>
+        <div class="qr"><img src="img/footer_erweima.png" alt=""></div>
+    </div>
+</div>
+<!-------------------------------------- 尾部结束-------------------------------------->
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/numberhidden.js"></script>
+<script>
+    //导航栏隐藏部分
+    $(document).ready(function() {
+        $(".menu_li2").hover(function(){
+            $(".dropdown-menu_li1").show();
+        },function(){
+            $(".dropdown-menu_li1").hide();
+        });
+    });
+</script>
+</body>
+</html>

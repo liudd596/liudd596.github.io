@@ -1,0 +1,76 @@
+@charset "utf-8";
+html{font-size: 625%}
+body,h1,h2,h3,p,ul,ol,form,fieldset,figure{margin: 0;padding: 0;}
+body{font-family:"微软雅黑";}
+ul,ol,li{list-style: outside none none;}  /*样式内外边距去掉*/
+a{text-decoration:none;}
+input,textarea,a,area{ outline:none; }
+.clearfix:after{content:".";display:block;height:0px;clear:both;visibility:hidden; }
+
+img{vertical-align: top}
+
+.headtop>img {
+    width: 100%;
+}
+.main {
+    width: 100%;
+    background: url(../img/cont.jpg) no-repeat;
+    background-size: 100% 100%;
+    height:3rem;
+}
+.main>h2{
+    font-size: .16rem;
+    color: #ffffff;
+    text-align: center;
+    font-weight: normal;
+    padding-top: 1.2rem;
+    margin: 0 auto;
+}
+.main>input{
+    font-size: .18rem;
+    display: block;
+    width: 2rem;
+    height: .26rem;
+    margin: 0 auto;
+    border:1px solid #bfbfbf;
+    border-radius: .06rem;
+    position: relative;
+    top: 1.66rem;
+    padding-left: 6px;
+}
+.main a{display: block}
+.main  img {
+    width: 43%;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 1.8rem;
+}
+.main .error{
+    font-size: .14rem;
+    text-align: center;
+    position: relative;
+    top: 1rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+.cont_text>img {
+    width: 100%;
+}
+
+@media only screen and (max-width:320px)
+{
+   .footer .infooter{width: 88%}
+   .topRec_List dd{margin-left:.2rem;}
+   .topRec_List .maquee ul li div{margin-left:.16rem;}
+   .topRec_List .maquee ul li div:nth-child(1){margin-left:.12rem;}
+   .ui-dialog-close{ right:2.6rem;}
+   .ui-dialog-close2{ right: -1rem;}
+}
+@media only screen and (min-width: 321px) and (max-width: 390px)
+{
+    .footer .infooter{width: 86%}
+    .topRec_List dd{margin-left:.27rem;}
+    .footer{height: 5.22rem}
+    .footer .infooter{height: 4.1rem}
+}

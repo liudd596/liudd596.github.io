@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>隐号宝</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow" />
+    <link rel="shortcut icon" href="img/bitbug_favicon48.ico" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-customize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/pages.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <script language="javascript" src="http://lzt.zoosnet.net/JS/LsJS.aspx?siteid=LZT19968005&float=1&lng=cn"></script>
+</head>
+<body>
+<header>
+    <div class="modal-backdrop"></div>
+    <!--右侧浮窗 start-->
+    <div id="floating_window">
+        <div class="infloating">
+            <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();;return false;" title="在线咨询"><div class="floating"><img src="img/floating1.jpg" alt=""/></div></a>
+            <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();;return false;" title="在线咨询"><div class="floating"><img src="img/floating2.jpg" alt=""/></div></a>
+            <a href="javascript:void(0)" onclick="alertTip()"><div class="floating"><img src="img/floating3.jpg" alt=""/></div></a>
+            <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();;return false;" title="在线咨询"><div class="floating"><img src="img/floating4.jpg" alt=""/></div></a>
+        </div>
+    </div>
+    <!--PC导航 start-->
+    <div class="container">
+        <div class="logo"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li class="menu_li2">
+                    <a><span>业务模式</span> <i class="ico menu_ico"></i></a>
+                    <div class="dropdown-menu_li1" style="display: none">
+                        <div class="hidden_content">
+                            <a href="num-middle.html"><span class="ico menu_ico_center1"></span><span>中间号</span></a>
+                            <a href="num-post.html"><span class="ico menu_ico_center2"></span><span>岗位号</span></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="application-scene.html"><span>应用场景</span></a></li>
+                <li><a href="experience.html"><span>体验中心</span></a></li>
+                <li><a href="about-us.html"><span>关于我们</span></a></li>
+            </ul>
+        </div>
+        <!-- 移动端菜单 -->
+        <a href="javascript:;" class="mbtn js-menu"></a>
+    </div>
+</header>
+<!--移动导航 start-->
+<div class="navi">
+    <div class="mask"></div>
+    <div class="hd">
+        <p><a href="javascript:;" onclick="$('#subm-1').toggle()">语音</a><i></i></p>
+        <div class="subm" id="subm-1">
+            <p><a href="YTX-chanpi/voice_inform.html">语音通知</a></p>
+            <p><a href="YTX-chanpi/voice_code.html">语音验证码</a></p>
+            <p><a href="YTX-chanpi/two-way_calls.html">双向呼叫</a></p>
+            <p><a href="YTX-chanpi/voice_calls.html">语音通话</a></p>
+        </div>
+        <p><a href="javascript:;" onclick="$('#subm-2').toggle()">短信</a><i></i></p>
+        <div class="subm" id="subm-2">
+            <p><a href="YTX-chanpi/sms_notify.html">短信通知</a></p>
+            <p><a href="YTX-chanpi/verification_code.html">短信验证码</a></p>
+        </div>
+        <p><a href="javascript:;" onclick="$('#subm-3').toggle()">流量</a><i></i></p>
+        <div class="subm" id="subm-3">
+            <p><a href="YTX-chanpi/flow_distribution.html">流量分发</a></p>
+        </div>
+        <p><a href="javascript:;" onclick="$('#subm-4').toggle()">呼叫中心</a><i></i></p>
+        <div class="subm" id="subm-4">
+            <p><a href="ZM-chanpi/yixiaoxinghujiaozhongxin.html">营销型呼叫中心</a></p>
+            <p><a href="ZM-chanpi/kefuxinghujiaozhongxin.html">客服型呼叫中心</a></p>
+            <p><a href="ZM-chanpi/dianjihujiao.html">点击呼叫</a></p>
+            <p><a href="ZM-chanpi/zhinengyuyindaohang.html">智能语音导航</a></p>
+            <p><a href="ZM-chanpi/zhinengyuyinzhijian.html">智能语音质检</a></p>
+        </div>
+        <p><a href="javascript:;" onclick="$('#subm-5').toggle()">多方会议</a><i></i></p>
+        <div class="subm" id="subm-5">
+            <p><a href="JSH-chanpi/phoneMeeting.html">电话会议</a></p>
+            <p><a href="http://meeting.commchina.net/netmeeting.php">视频会议</a></p>
+        </div>
+        <p><a class="m-xiangq">查看更多详情，请打开电脑浏览器<br />“http://www.commchina.net/”</a><i class="m-xiangi"  onclick="$('.navi').hide()"></i></p>
+    </div>
+</div>
+<!-------------------------------------- 头部结束 -------------------------------------->
+<!-------------------------------------- 内容开始 -------------------------------------->
+<div class="ui-headview" style="background-image: url(img/BG-hidden.jpg);height: 560px;"></div>
+<!------------ 业务模式 -------------->
+<div class="ui-fullpart">
+    <div class="container" style="width: 1000px;">
+        <div class="ui-title">
+            <div class="ht40"></div>
+            <h3>业务模式</h3>
+        </div>
+        <div class="ht50"></div>
+        <div class="ui-list-news">
+            <ul>
+                <li>
+                    <div class="i">
+                        <div class="img">
+                            <img src="img/index-gw.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="hd">
+                                <p>01  岗位号</p>
+                            </div>
+                            <div class="ct">
+                                <p>入职即绑定岗位号 客户信息资料全留存员工流动带不走</p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="i">
+
+                        <div class="txt">
+                            <div class="hd">
+                                <p>02  中间号</p>
+                            </div>
+                            <div class="ct">
+                                <p>保护供需双方号码隐私安全
+                                    有效防范通信数据信息泄露</p>
+                            </div>
+                        </div>
+                        <div class="img" style="float: right">
+                            <img src="img/index-zj.jpg" alt="">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!------------ 应用场景 -------------->
+<div class="ui-fullpart">
+    <div class="container">
+        <div class="ui-title">
+            <div class="ht40"></div>
+            <h3>应用场景</h3>
+        </div>
+        <div class="ht50"></div>
+    </div>
+</div>
+<div class="module-wrap" style="background:#373d41;">
+    <div class="slide-body" style="height: 420px;">
+        <ul class="slide-content" id="slide-content">
+
+            <li class="slide-item" data-code="ecommerce" style="width: 200px; height: 420px;">
+                <a target="_blank" style="display:block;">
+                    <img class="item-bg" src="img/module-wrap1.jpg" alt="">
+                    <div class="mask">
+                        <div class="bg "></div>
+                        <div class="content">
+                            <div class="item-img-panel" style="height: 59px;">
+                                <img src="img/module-wrapico1.png" alt="" class="item-img">
+                                <img src="img/module-wrapico1.png" alt="" class="item-img-hover">
+                            </div>
+                            <p class="line-panel">
+                                <i class="item-line"></i>
+                            </p>
+                            <h3 class="item-title">出行用车</h3>
+                            <p class="item-desc">
+                                通过隐号宝建立联系，隐藏彼此真实号码。有效杜绝网约车带来的号码隐私泄露，杜绝骚扰。
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="slide-item" data-code="app" style="width: 200px; height: 420px;">
+                <a target="_blank" style="display:block;">
+                    <img class="item-bg" src="img/module-wrap2.jpg" alt="">
+                    <div class="mask">
+                        <div class="bg other-bg"></div>
+                        <div class="content">
+                            <div class="item-img-panel" style="height: 59px;">
+                                <img src="img/module-wrapico2.png" alt="" class="item-img">
+                                <img src="img/module-wrapico2.png" alt="" class="item-img-hover">
+                            </div>
+                            <p class="line-panel">
+                                <i class="item-line"></i>
+                            </p>
+                            <h3 class="item-title">房产中介</h3>
+                            <p class="item-desc">
+                                通过隐号宝建立经纪人和业主的联系，杜绝私下交易，杜绝跳单，同时更好对经纪人进行管理和考核。
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="slide-item" data-code="game" style="width: 200px; height: 420px;">
+                <a target="_blank" style="display:block;">
+                    <img class="item-bg" src="img/module-wrap3.jpg" alt="">
+                    <div class="mask">
+                        <div class="bg "></div>
+                        <div class="content">
+                            <div class="item-img-panel" style="height: 59px;">
+                                <img src="img/module-wrapico3.png" alt="" class="item-img">
+                                <img src="img/module-wrapico3.png" alt="" class="item-img-hover">
+                            </div>
+                            <p class="line-panel">
+                                <i class="item-line"></i>
+                            </p>
+                            <h3 class="item-title">游戏解决方案</h3>
+                            <p class="item-desc">
+                                为游戏开发者提供专属集群、尊享VIP服务、专项扶持基金、多场景游戏部署解决方案
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="slide-item" data-code="web" style="width: 200px; height: 420px;">
+                <a target="_blank" style="display:block;">
+                    <img class="item-bg" src="img/module-wrap4.jpg" alt="">
+                    <div class="mask">
+                        <div class="bg other-bg"></div>
+                        <div class="content">
+                            <div class="item-img-panel" style="height: 59px;">
+                                <img src="img/module-wrapico4.png" alt="" class="item-img">
+                                <img src="img/module-wrapico4.png" alt="" class="item-img-hover">
+                            </div>
+                            <p class="line-panel">
+                                <i class="item-line"></i>
+                            </p>
+                            <h3 class="item-title">网站解决方案</h3>
+                            <p class="item-desc">
+                                依据网站不同发展阶段，为网站类用户提供最佳上云方案，有效降低运维难度和整体IT成本
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="slide-item" data-code="media" style="width: 200px; height: 420px;">
+                <a target="_blank" style="display:block;">
+                    <img class="item-bg" src="img/module-wrap5.jpg" alt="">
+                    <div class="mask">
+                        <div class="bg "></div>
+                        <div class="content">
+                            <div class="item-img-panel" style="height: 59px;">
+                                <img src="img/module-wrapico5.png" alt="" class="item-img">
+                                <img src="img/module-wrapico5.png" alt="" class="item-img-hover">
+                            </div>
+                            <p class="line-panel">
+                                <i class="item-line"></i>
+                            </p>
+                            <h3 class="item-title">音视频解决方案</h3>
+                            <p class="item-desc">
+                                一站式提供“海量存储、高效分发、极速网络”等服务， 轻松坐享CCTV-5、微博的传播能力
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="slide-item" data-code="media" style="width: 200px; height: 420px;">
+                <a target="_blank" style="display:block;">
+                    <img class="item-bg" src="img/module-wrap6.jpg" alt="">
+                    <div class="mask">
+                        <div class="bg "></div>
+                        <div class="content">
+                            <div class="item-img-panel" style="height: 59px;">
+                                <img src="img/module-wrapico6.png" alt="" class="item-img">
+                                <img src="img/module-wrapico6.png" alt="" class="item-img-hover">
+                            </div>
+                            <p class="line-panel">
+                                <i class="item-line"></i>
+                            </p>
+                            <h3 class="item-title">招聘求职</h3>
+                            <p class="item-desc">
+                                通过隐号宝建立用户双方的通信联系，保护用户号码隐私，同时提供通话录音，帮助平台进行管控。
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-------------应用场景 snd------------->
+<!-------------产品优势----------------->
+<div class="ui-fullpart"  style="background-image: url(img/yycj-bg.png);height: 820px;">
+    <div class="container">
+        <div class="ui-title">
+            <div class="ht40"></div>
+            <h3>产品优势</h3>
+        </div>
+        <div class="ht50"></div>
+
+        <div class="ui-list-new">
+            <ul>
+                <li>
+                    <div class="i">
+                        <div class="img">
+                            <img src="img/cpys-ico1.png" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="hd">
+                                <p>丰富的通讯资源</p>
+                            </div>
+                            <div class="ct">
+                                <p>根据不同的业务场景<br />提供各省市手机、固话、400以及95号码展示<br />并有丰富的全国语音线路资源<br /> </p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="i">
+                        <div class="img" >
+                            <img src="img/cpys-ico2.png" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="hd">
+                                <p>完善的解决方案</p>
+                            </div>
+                            <div class="ct">
+                                <p>结合不同行业不同商业模式<br />
+                                    设计提供满足业务场景<br />
+                                    支持AX、AX+、AXB、AXYB等多种隐私通话模式</p>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="i">
+                        <div class="img">
+                            <img src="img/cpys-ico3.png" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="hd">
+                                <p>电信级通讯平台</p>
+                            </div>
+                            <div class="ct">
+                                <p>十年通讯服务经验<br>
+                                    支持海量通话并发，平台系统稳定支撑日均三千万量级的隐私通话服务 </p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="i">
+                        <div class="img" >
+                            <img src="img/cpys-ico4.png" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="hd">
+                                <p>智能的统计分析</p>
+                            </div>
+                            <div class="ct">
+                                <p>基于大数据智能统计分析<br>
+                                    为客户提供商业智能支持<br>
+                                    提升客户整体满意度指标</p>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="i">
+                        <div class="img">
+                            <img src="img/cpys-ico5.png" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="hd">
+                                <p>灵活的对接方案</p>
+                            </div>
+                            <div class="ct">
+                                <p>提供多平台技术支持<br />
+                                    实现API、SDK等多种接入方式<br />
+                                    大幅度提升企业研发成本</p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="i">
+                        <div class="img" >
+                            <img src="img/cpys-ico6.png" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="hd">
+                                <p>全录音智能质检</p>
+                            </div>
+                            <div class="ct">
+                                <p>提供全程录音服务<br />
+                                    基于人工智能提供客户情绪管理<br />
+                                    客服座席标准话术的录音质检</p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<!-------------合作客户 snd------------->
+<div class="ui-fullpart" style="background-color: #fff;position: relative">
+    <div class="container">
+        <div class="ui-title">
+            <div class="ht40"></div>
+            <h3>合作客户</h3>
+        </div>
+        <div class="ht50"></div>
+        <div class="ui-list-step1 span5">
+            <ul>
+                <li><img src="img/case/ico1.png" alt=""></li>
+                <li><img src="img/case/ico2.png" alt=""></li>
+                <li><img src="img/case/ico3.png" alt=""></li>
+                <li><img src="img/case/ico4.png" alt=""></li>
+                <li><img src="img/case/ico5.png" alt=""></li>
+            </ul>
+            <ul>
+                <li><img src="img/case/ico6.png" alt=""></li>
+                <li><img src="img/case/ico7.png" alt=""></li>
+                <li><img src="img/case/ico8.png" alt=""></li>
+                <li><img src="img/case/ico9.png" alt=""></li>
+                <li><img src="img/case/ico10.png" alt=""></li>
+            </ul>
+            <ul>
+                <li><img src="img/case/ico11.png" alt=""></li>
+                <li><img src="img/case/ico12.png" alt=""></li>
+                <li><img src="img/case/ico13.png" alt=""></li>
+                <li><img src="img/case/ico14.png" alt=""></li>
+                <li><img src="img/case/ico15.png" alt=""></li>
+            </ul>
+            <ul>
+                <li><img src="img/case/ico16.png" alt=""></li>
+                <li><img src="img/case/ico17.png" alt=""></li>
+                <li><img src="img/case/ico18.png" alt=""></li>
+                <li><img src="img/case/ico19.png" alt=""></li>
+                <li><img src="img/case/ico20.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+        <div class="ht20"></div>
+
+    </div>
+    <div class="ht60"></div>
+
+
+
+</div>
+<div class="ht20"></div>
+<!-------------咨询服务详情 start------------->
+<div class="ui-fullpart" style="background-image: url(img/footer_bg.jpg); height: 400px;padding:0;text-align: center">
+    <div class="ht55"></div>
+    <P class="text-p1">咨询服务详情</P>
+    <p class="text-p1">请致电或在线问询售前顾问</p>
+    <div class="ht40"></div>
+    <div class="hgroup" style="top: 80%">
+        <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();;return false;" class="bluebg"><img
+                src="img/ico-xx.png" alt=""> 在线咨询</a>
+        <a href="javascript:void(0)" onclick="alertTip()" class="bluebg"><img
+                src="img/ico-phon.png" alt=""> 电话咨询</a>
+    </div>
+</div>
+
+<!------------------------------------体 验 弹 窗---------------------------------------->
+<!--电话咨询弹窗 start-->
+<div id="Dialog-con" >
+    <div class="custom_banner_text">
+        <button class="ui-dialog-close2" onclick="closePop()">×</button>
+        <div class="text1" style="margin-top: 20px;">
+            <h2> 在线客服</h2>
+            <h3>“400-0707-600”</h3>
+            <div class="div1"></div>
+            <p class="ban_p">客服中心收到您的号码后会及时与您联系，欢迎体验！</p>
+            <form id="userInfoFrm" name="userInfoFrm" method="post">
+                <div class="group">
+                    <div class="error" id="regularyz" style="display: none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="phone_error">手机号码格式不正确，请重新输入</span></div>
+                    <input type="text" name="" id="sxhjsrc" class="input1 border-red" placeholder="请输入您的手机号码" onblur="return check(this)">
+                    <i class="num"></i>
+                </div>
+                <div class="group">
+                    <div class="error" style=" margin-top:10px;display: none" id="yzmyz" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="yzmerror">验证码不正确，请重新输入</span></div>
+                    <input type="text" name="imgCode" class="input2" id="sxhjyzm" placeholder="请输入验证码" style=" margin-top:10px;">
+                    <span id="sxhj"></span>
+                </div>
+                <div class="item">
+                    <p class="fl">手机直接输入号码。如：1863216****；<br>
+                        座机前加区号，如：0108858****；<br>
+                        提交号码后，请您接收到我们的回电</p>
+                    <a class="btn_join fr" onclick="sxhj()">免费咨询</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--电话咨询弹窗 end-->
+<!-------------------------------------- 内容结束 -------------------------------------->
+<!-------------------------------------- 尾部开始 -------------------------------------->
+<div id="footeri">
+    <div class="container">
+        <div class="info">
+            <div class="ht20"></div>
+            <p>
+                <a href="chanpi/gongsijianjie.html">首页 </a>
+                <span>|</span>
+                <a href="chanpi/lianxiwomen.html"> 业务模式 </a>
+                <span>|</span>
+                <a href="chanpi/lianxiwomen.html"> 应用场景 </a>
+                <span>|</span>
+                <a href="chanpi/lianxiwomen.html"> 关于我们 </a>
+            </p>
+            <div class="ht25"></div>
+            <p>2011-2017 北京云讯科技有限公司 京ICP备14002087号-7</p>
+        </div>
+        <div class="qr"><img src="img/footer_erweima.png" alt=""></div>
+    </div>
+</div>
+<!-------------------------------------- 尾部结束-------------------------------------->
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/numberhidden.js"></script>
+<script>
+    //导航栏隐藏部分
+    $(document).ready(function() {
+        $(".menu_li2").hover(function(){
+            $(".dropdown-menu_li1").show();
+        },function(){
+            $(".dropdown-menu_li1").hide();
+        });
+    });
+</script>
+</body>
+</html>
