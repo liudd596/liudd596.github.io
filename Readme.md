@@ -10,7 +10,3 @@ https://liudd596.github.io/work/LanternFestival H5游戏 猜灯谜闹元宵
 https://liudd596.github.io/work/Recharge/Views/Recharge/Recharge.html H5流量营销  
 https://liudd596.github.io/work/intelligent_robot H5云雀智能机器人体验  
 
-## 博客
-https://imququ.com/ 前端开发   
-https://hellogithub.com/ 前端开源   
-https://juejin.im/post/5aab1a14f265da23a141a340?utm_source=gold_browser_extension 如何在公司里体现前端的价值以及提升自己的议价能力？  
