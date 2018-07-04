@@ -1,0 +1,24 @@
+/*客服电话*/
+#custom_banner .incustom_banner{width: 1200px;height: 998px;margin: 0 auto;border: 0px solid #FFFFFF;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;}
+#custom_banner .incustom_banner .custom_banner_text{position: relative;top: 200px}
+#custom_banner .incustom_banner .custom_banner_text .text1{border-right: 2px solid #FFFFFF;width: 650px;height: 450px}
+#custom_banner .incustom_banner .custom_banner_text .text1  h2{color: #ff9c00;font-size: 60px}
+#custom_banner .incustom_banner .custom_banner_text .text1 .div1{width: 454px;height: 3px;background-color: #FFFFFF;opacity: .2;margin:30px 40px; }
+#custom_banner .incustom_banner .custom_banner_text .text1  .ban_p{font-size: 18px;color: #FFFFFF;margin-left: 50px;}
+#custom_banner .incustom_banner .custom_banner_text form{margin-top: 60px;margin-left: -800px}
+#custom_banner .incustom_banner .custom_banner_text .group{position: relative;left:280px;top:-10px;color: #FFFFFF;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;margin: 10px auto 40px;width:320px;height: 46px;}
+#custom_banner .incustom_banner .custom_banner_text .group input{position: absolute;top: 0px;left:0px;display: block;font-size:18px;height: 66px;line-height: 44px; padding: 0 70px; background-color:#fff; border:1px solid #c9c9c9;font-family:"微软雅黑";color: #333333;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;}
+#custom_banner .incustom_banner .custom_banner_text .group .input1{width: 456px;}
+#custom_banner .incustom_banner .custom_banner_text .group .input2{width: 249px;float: left;}
+#custom_banner .incustom_banner .custom_banner_text .group .input3{width: 180px;float: left;}
+#custom_banner .incustom_banner .custom_banner_text .group .num{display: inline-block;width: 32px;height: 32px;position: absolute;left:20px;top: 16px;background: url(../images/index/coustom_use.png) 0px 0px no-repeat;}
+ /*.group .num:hover{background-position: 30px -1px;}*/
+#custom_banner .incustom_banner .custom_banner_text  .group .js-load-code{float: right;margin-right: -135px}
+#custom_banner .incustom_banner .custom_banner_text  .group .error{display: block;position: absolute;top: -24px;line-height: 20px;color: #ff0000;background: url("../images/index/care.png") no-repeat;}
+#custom_banner .incustom_banner .custom_banner_text .item p{font-size: 14px;width: 260px;margin-top: 30px;line-height: 22px}
+#custom_banner .incustom_banner .custom_banner_text .item .btn_join{width: 187px;height: 66px;background-color: #3ea3ff;font-size: 22px;color: #FFFFFF;text-align: center;line-height: 66px;position: relative;left: 134px;top: -64px;cursor: pointer;display: block;}
+
+#custom_banner .incustom_banner .custom_banner_text .text2{position: relative;top: -380px;right: 30px}
+#custom_banner .incustom_banner .custom_banner_text .text2 p{font-size: 20px;color: #FFFFFF;margin-bottom: 80px}
+#custom_banner .incustom_banner .custom_banner_text .text2  span{color: #ff9c00}
+#custom_banner .incustom_banner .custom_banner_text .text2  a{display: block;font-size: 22px;color: #FFFFFF;background-color: #3ea3ff;width:326px;height: 64px;text-align: center;line-height: 64px;margin-left: 32px}

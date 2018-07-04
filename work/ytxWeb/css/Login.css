@@ -1,0 +1,83 @@
+
+#login_banner{background: url("../images/index/login_banner_bg.jpg") no-repeat scroll center center;margin-top: 74px;height:1000px;position: }
+#login_banner .inlogin_banner{position: relative;}
+#login_banner .inlogin_banner .login{position: absolute;top: 50%;left: 50%;margin-top: 110px;margin-left: -380px}
+#login_banner .inlogin_banner .login img{margin-left:60px }
+#login_banner .inlogin_banner .login .inlogin{width: 760px;height: 640px;background-color:#FFFFFF;margin-top: 50px}
+#login_banner .inlogin_banner .login .inlogin .login-top{width: 760px;height: 80px;background-color: #ededed;}
+#login_banner .inlogin_banner .login .inlogin .login-top img{display: block;float: left;margin-top: 14px;margin-left: 40px}
+#login_banner .inlogin_banner .login .inlogin .login-top p{float: right;font-size: 20px;color: #3ea3ff;text-align: center;width:100px;line-height: 80px;letter-spacing: 1px}
+#login_banner .inlogin_banner .login .inlogin .login-top i{width: 60px;height: 4px;position: absolute;top: 182px;right: 20px}
+#login_banner .inlogin_banner .login .inlogin .login-center{width: 500px;height: 560px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin: 0 auto;}
+#login_banner .inlogin_banner .login .inlogin .login-center p{font-size: 30px;color: #3f3f3f;letter-spacing: 1px;margin: 50px 0 0 180px}
+#login_banner .inlogin_banner .login .inlogin .login-center p span{color: #3ea3ff}
+#login_banner .inlogin_banner .login .inlogin .login-center form{margin-top: 60px}
+#login_banner .inlogin_banner .login .inlogin .login-center .group{position: relative;left:50px;color: #FFFFFF;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;margin: 30px auto 16px;height: 46px;}
+
+.group .phone_num{width: 80px;height: 30px;position: absolute;left:40px;top: 12px;font-size:18px;font-family:"微软雅黑";color: #666666}
+.group .code_num{width: 90px;height: 30px;position: absolute;left:40px;top:12px;font-size:18px;font-family:"微软雅黑";color: #666666;z-index:99;}
+.group .shape_num{width: 140px;height: 30px;position: absolute;left:6px;top: 12px;font-size:18px;font-family:"微软雅黑";color: #666666;z-index:99;}
+.group .phone_num span{color: #3ea3ff}
+.group .code_num span{color: #3ea3ff}
+.group .shape_num span{color: #3ea3ff}
+
+#login_banner .inlogin_banner .login .inlogin .login-center .duigou{margin-left:-216px}
+#login_banner .inlogin_banner .login .inlogin .login-center .group input{position: relative;top: 0px;left:0px;display: block;font-size:16px;height: 40px;line-height: 40px; padding-left:110px; background-color:#fff; border:1px solid #3ea3ff;font-family:"微软雅黑";color: #999999;}
+#login_banner .inlogin_banner .login .inlogin .login-center .group1{margin-top: 60px}
+#login_banner .inlogin_banner .login .inlogin .login-center .group .input1{width: 280px;}
+#login_banner .inlogin_banner .login .inlogin .login-center .group .input2{width: 160px;float: left;}
+#login_banner .inlogin_banner .login .inlogin .login-center .group .input3{width: 160px;float: left;}
+#login_banner .inlogin_banner .login .inlogin .login-center .group .input4{width: 116px;margin-left:280px;padding: 0px;font-size: 16px;height: 42px; background-color:#3ea3ff;color: #fff;cursor: pointer;}
+#login_banner .inlogin_banner .login .inlogin .login-center .group .num{display: inline-block;width: 32px;height: 32px;position: absolute;left: 0px;top: 10px;background: url(../images/index/input1.png) 6px -1px no-repeat;}
+#login_banner .inlogin_banner .login .inlogin .login-center .group .num2{display: inline-block;width: 38px;height: 32px;position: absolute;left: -2px;top: 10px;background: url(../images/index/input1.png) -110px -1px no-repeat;}
+#login_banner .inlogin_banner .login .inlogin .login-center .group .num3{display: inline-block;width: 38px;height: 32px;position: absolute;left: 2px;top: 10px;background: url(../images/index/input1.png) -160px -1px no-repeat;}
+
+#login_banner .inlogin_banner .login .inlogin .login-center .group .num:hover{background-position: 30px -1px;}
+#login_banner .inlogin_banner .login .inlogin .login-center .group .js-load-code{float: right;margin-right: 156px;height:42px;margin-top:-42px}
+#login_banner .inlogin_banner .login .inlogin .login-center .group .exchange{color: #ff0000;font-size: 16px;float: right;margin:-16px 100px 0 0;display: block}
+#login_banner .inlogin_banner .login .inlogin .login-center .group .error{display: block;margin-top:6px;line-height: 20px;color: #ff0000;background: url("../images/index/care.png") no-repeat;width: 600px;}
+#login_banner .inlogin_banner .login .inlogin .login-center .group .error3{display: block;margin-top:-40px;line-height: 20px;color: #ff0000;width: 600px;background: url("../images/index/care.png") no-repeat;position:absolute;top:86px;left:0px}
+
+#login_banner .inlogin_banner .login .inlogin .login-center .group .error1{display: block;margin-top:4px;line-height: 20px;color: #ff0000;width: 500px}
+#login_banner .inlogin_banner .login .inlogin .login-center .group .error2{display: block;margin-top:2px;line-height: 20px;color: #ff0000;width: 500px;}
+#login_banner .inlogin_banner .login .inlogin .login-center .group .error2 em{font-size: 16px;color: #838383;}
+#login_banner .inlogin_banner .login .inlogin .login-center .group .error2 a{font-size: 18px;color: #3ea3ff;}
+/*#login_banner .inlogin_banner .login .inlogin .login-center .group .close{cursor: pointer;display: inline-block;width: 32px;height: 32px;position: absolute;right: -60px;top: 6px;background: url(../images/index/input1.png) -70px 3px;}*/
+#login_banner .inlogin_banner .login .inlogin .login-center .group .close1{position: absolute;right: -80px;top:12px}
+/*#login_banner .inlogin_banner .login .inlogin .login-center  .group .close2{position: absolute;right: 70px;}*/
+#login_banner .inlogin_banner .login .inlogin .login-center .btn_join{width: 396px;height: 50px;display: block;background-color: #3ea3ff;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;line-height: 50px;text-align: center;color: #FFFFFF;font-size: 18px;margin: 70px 0 0 0;cursor: pointer;}
+#login_banner .inlogin_banner .login .inlogin .login-center .Textadd{margin:0px 0 0 70px;color: #000;font-size: 16px;width: 320px;}
+#login_banner .inlogin_banner .login .inlogin .login-center .Textadd input{display: inline;display: inline;position:relative;top:14px}
+#login_banner .inlogin_banner .login .inlogin .login-center .Textadd a{font-size: 16px;color: #3ea3ff;}
+#cbk{width: 20px;height: 20px;background-color: #fff;margin-top:8px;margin-left:0px}
+.group-agree{margin: 0px auto 0px;position: absolute;left:190px;width:320px;height: 46px;}
+.group .txt{color: #6f6f6f;font-size: 14px;margin-left: 20px; }
+.group .txt span{position: absolute;top: 14px}
+.txta{position: absolute; right: -50px;display: block;top:0px;font-size: 14px;color: #1c1c1c;}
+
+
+#login_banner .inlogin_banner .login .inlogin  .tab_button{font-size: 16px;color: #a8a8a8;display: block;margin-top: -100px;width: 780px}
+#login_banner .inlogin_banner .login .inlogin  .tab_button li{float: left}
+#login_banner .inlogin_banner .login .inlogin  .tab_button a{margin-left: 200px;cursor: pointer}
+#login_banner .inlogin_banner .login .inlogin  .selected2{color: #3ea3ff}
+#login_banner .inlogin_banner .login .inlogin  .hide{display:none;}
+
+.border-red{border:1px solid #ff0000;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -16,6 +16,25 @@
     <link rel="stylesheet" type="text/css" href="css/pages.css">
     <link rel="stylesheet" type="text/css" href="css/media.css">
     <script language="javascript" src="http://lzt.zoosnet.net/JS/LsJS.aspx?siteid=LZT19968005&float=1&lng=cn"></script>
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <script>
+        var fun = function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+
+                    //这里是假设在640px宽度设计稿的情况下，1rem = 20px；
+                    //可以根据实际需要修改
+                    docEl.style.fontSize = 100 * (clientWidth /1920) + 'px';
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        }
+        fun(document, window);
+    </script>
 </head>
 <body>
 <header>
@@ -30,13 +49,13 @@
         </div>
     </div>
     <!--PC导航 start-->
-    <div class="container">
+    <div class="container nav_menu">
         <div class="logo"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
         <div class="menu">
             <ul>
                 <li><a href="index.html">首页</a></li>
                 <li class="menu_li2">
-                    <a><span>业务模式</span> <i class="ico menu_ico"></i></a>
+                    <a href="num-middle.html"><span>业务模式</span> <i class="ico menu_ico"></i></a>
                     <div class="dropdown-menu_li1" style="display: none">
                         <div class="hidden_content">
                             <a href="num-middle.html"><span class="ico menu_ico_center1"></span><span>中间号</span></a>
@@ -50,43 +69,51 @@
             </ul>
         </div>
         <!-- 移动端菜单 -->
-        <a href="javascript:;" class="mbtn js-menu"></a>
+        <a href="javascript:;" class="mbtn js-menu" id="UpDown"></a>
     </div>
 </header>
 <!--移动导航 start-->
 <div class="navi">
     <div class="mask"></div>
     <div class="hd">
-        <p><a href="javascript:;" onclick="$('#subm-1').toggle()">语音</a><i></i></p>
-        <div class="subm" id="subm-1">
-            <p><a href="YTX-chanpi/voice_inform.html">语音通知</a></p>
-            <p><a href="YTX-chanpi/voice_code.html">语音验证码</a></p>
-            <p><a href="YTX-chanpi/two-way_calls.html">双向呼叫</a></p>
-            <p><a href="YTX-chanpi/voice_calls.html">语音通话</a></p>
-        </div>
-        <p><a href="javascript:;" onclick="$('#subm-2').toggle()">短信</a><i></i></p>
+        <p>
+            <a href="index.html">首页</a>
+            <i></i>
+        </p>
+        <p>
+            <a href="javascript:;" id="business">业务模式</a>
+            <i class="Forward" id="Forward1"></i>
+            <span class="dropDown" id="dropDown1"></span>
+        </p>
         <div class="subm" id="subm-2">
-            <p><a href="YTX-chanpi/sms_notify.html">短信通知</a></p>
-            <p><a href="YTX-chanpi/verification_code.html">短信验证码</a></p>
+            <p><a href="num-middle.html">中间号</a></p>
+            <p><a href="num-post.html">岗位号</a></p>
         </div>
-        <p><a href="javascript:;" onclick="$('#subm-3').toggle()">流量</a><i></i></p>
+        <p>
+            <a href="javascript:;" id="application">应用场景</a>
+            <i class="Forward"></i>
+            <span class="dropDown"></span>
+        </p>
         <div class="subm" id="subm-3">
-            <p><a href="YTX-chanpi/flow_distribution.html">流量分发</a></p>
+            <p><a href="application-scene.html">出行用车</a></p>
+            <p><a href="application-scene-fchzj.html">房产中介</a></p>
+            <p><a href="application-scene-wmai.html">外卖送餐</a></p>
+            <p><a href="application-scene-jypxun.html">教育培训</a></p>
+            <p><a href="application-scene-esjy.html">二手交易</a></p>
+            <p><a href="application-scene-qzhi.html">求职招聘</a></p>
         </div>
-        <p><a href="javascript:;" onclick="$('#subm-4').toggle()">呼叫中心</a><i></i></p>
-        <div class="subm" id="subm-4">
-            <p><a href="ZM-chanpi/yixiaoxinghujiaozhongxin.html">营销型呼叫中心</a></p>
-            <p><a href="ZM-chanpi/kefuxinghujiaozhongxin.html">客服型呼叫中心</a></p>
-            <p><a href="ZM-chanpi/dianjihujiao.html">点击呼叫</a></p>
-            <p><a href="ZM-chanpi/zhinengyuyindaohang.html">智能语音导航</a></p>
-            <p><a href="ZM-chanpi/zhinengyuyinzhijian.html">智能语音质检</a></p>
-        </div>
-        <p><a href="javascript:;" onclick="$('#subm-5').toggle()">多方会议</a><i></i></p>
-        <div class="subm" id="subm-5">
-            <p><a href="JSH-chanpi/phoneMeeting.html">电话会议</a></p>
-            <p><a href="http://meeting.commchina.net/netmeeting.php">视频会议</a></p>
-        </div>
-        <p><a class="m-xiangq">查看更多详情，请打开电脑浏览器<br />“http://www.commchina.net/”</a><i class="m-xiangi"  onclick="$('.navi').hide()"></i></p>
+        <p>
+            <a href="experience.html">体验中心</a>
+            <i></i>
+        </p>
+        <p>
+            <a href="about-us.html">关于我们</a>
+            <i></i>
+        </p>
+        <p>
+            <a class="m-xiangq">查看更多详情，请打开电脑浏览器<br />“http://www.commchina.net/”</a>
+            <i class="m-xiangi"></i>
+        </p>
     </div>
 </div>
 <!-------------------------------------- 头部结束 -------------------------------------->
@@ -95,122 +122,121 @@
 <!------------ 产品介绍 -------------->
 <div class="ui-fullpart">
     <div class="container">
-        <div class="ui-title">
-            <h3>产品介绍</h3>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h2 class="titel">产品介绍</h2>
+            </div>
         </div>
-        <div class="ht40"></div>
-        <div class="ui-text style1">
-            <p style="padding: 0px 190px;">隐号宝的“中间号”，是基于运营商移动网电信级品质的通信能力产品，满足实名制、真实SIM卡托管产品， 可有效保护交易双方的号码隐私安全，防止出现后续电话骚扰，防止企业重要信息发生泄漏。</p>
+        <div class="row">
+            <div class="col-xs-12 col-sm-11 col-sm-offset-1
+            col-md-8 col-md-offset-2 text-center">
+                <p style="font-size: 15px;margin-bottom: 20px;padding: 10px">隐号宝的“中间号”，是基于运营商移动网电信级品质的通信能力产品，
+                    满足实名制、真实SIM卡托管产品， 可有效保护交易双方的号码隐私安全，
+                    防止出现后续电话骚扰，防止企业重要信息发生泄漏。</p>
+            </div>
         </div>
-        <div class="ht40"></div>
-        <div class="ui-list-step1" style="text-align: center">
-            <img src="img/num-middleimg1.png" alt="">
+        <div class="row">
+            <div class="col-xs-12 col-sm-11 col-sm-offset-1 col-md-8 col-md-offset-2">
+                <img src="img/num-middleimg1.png" class="img-responsive center-block">
+            </div>
         </div>
     </div>
 </div>
 <!------------ 重要功能 -------------->
+<div class="ht50"></div>
 <div class="ui-fullpart">
     <div class="container" style="width: 1000px;">
-        <div class="ui-title">
-            <div class="ht40"></div>
-            <h3>重要功能</h3>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h2 class="titel">重要功能</h2>
+            </div>
         </div>
-        <div class="ht50"></div>
-        <div class="ui-list-news">
-            <ul>
-                <div class="ht50"></div>
-                <li>
-                    <div class="i">
-                        <div class="txt" style="padding: 0">
-                            <div class="hd">
-                                <p>隐藏号码</p>
-                            </div>
-                            <div class="ct">
-                                <p>双向或单向的号码隐藏功能，避免泄露和骚扰，为用户提供不同身份的通信服务。</p>
-                            </div>
-                        </div>
-                        <div class="img"  style="margin-left: 100px">
-                            <img src="img/num-middle-gn1.png" alt="">
-                        </div>
-                        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-11 col-md-offset-1 text-center">
+                <div class="row" style="margin:25px 0px">
+                    <div class="col-xs-12 col-sm-6 text-left">
+                        <h3 class="FunH3">隐藏号码</h3>
+                        <p class="FunP">双向或单向的号码隐藏功能，避免泄露和骚扰，为用户提供不同身份的通信服务。</p>
                     </div>
-                </li>
-                <div class="ht50"></div>
-                <li>
-                    <div class="i">
-                        <div class="img">
-                            <img src="img/num-middle-gn2.png" alt="">
-                        </div>
-                        <div class="txt" style="padding: 0;margin-left: 180px">
-                            <div class="hd">
-                                <p>通话管理</p>
-                            </div>
-                            <div class="ct">
-                                <p>后台统一维护企业通信录，分类管理客户资源；通话和短信，通过黑白名单，分权限控制呼入呼出和短信，控制通话时长。</p>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
+                    <div class="col-xs-12 col-sm-6">
+                        <img src="img/num-middle-gn1.png" class="img-responsive center-block">
                     </div>
-                </li>
-                <div class="ht50"></div>
-                <li>
-                    <div class="i">
-                        <div class="txt" style="padding: 0">
-                            <div class="hd">
-                                <p>统计分析</p>
-                            </div>
-                            <div class="ct">
-                                <p>话务平台对通信过程全程监控，提供详细话单及完整呼叫轨迹，全程录音，包括通话及接续过程。</p>
-                            </div>
-                        </div>
-                        <div class="img"  style="margin-left: 100px">
-                            <img src="img/num-middle-gn3.png" alt="">
-                        </div>
-                        <div class="clearfix"></div>
+                </div>
+                <div class="row"  style="margin:25px 0px">
+                    <div class="col-xs-12 col-sm-6 col-sm-push-6 text-left">
+                        <h3 class="FunH3">通话管理</h3>
+                        <p class="FunP">后台统一维护企业通信录，分类管理客户资源；
+                            通话和短信，通过黑白名单，分权限控制呼入呼出和短信，控制通话时长。</p>
                     </div>
-                </li>
-            </ul>
-            <div class="clearfix"></div>
+                    <div class="col-xs-12 col-sm-6 col-sm-pull-6">
+                        <img src="img/num-middle-gn2.png" class="img-responsive center-block">
+                    </div>
+                </div>
+                <div class="row"  style="margin:25px 0px">
+                    <div class="col-xs-12 col-sm-6 text-left">
+                        <h3 class="FunH3">统计分析</h3>
+                        <p class="FunP">话务平台对通信过程全程监控，提供详细话单及完整呼叫轨迹，全程录音，包括通话及接续过程。</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <img src="img/num-middle-gn3.png" class="img-responsive center-block">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <!------------ 典型案例 -------------->
 <div class="ui-fullpart">
-    <div class="container" style="width: 1000px;">
-        <div class="ui-title">
-            <div class="ht40"></div>
-            <h3>典型案例</h3>
-        </div>
-        <div class="ht40"></div>
-
-        <div class="ui-text style1">
-            <div style="padding: 0px 140px;">
-                <img src="img/gzlogo.jpg" alt="">
-                <div class="ht10"></div>
-                <p>瓜子二手车，作为二手车交易平台，通过隐号宝的“中间号”，实现客服人员与买车人之间的沟通，即可保护车主的号码隐私，也可防止车主信息被竞争对手抓取，更好管控交易服务过程。</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h2 class="titel">典型案例</h2>
             </div>
         </div>
-        <div class="ht40"></div>
-        <div class="ui-list-step1" style="text-align: center">
-            <img src="img/num-middle-gn4.png" alt="">
+        <div class="row">
+            <div class="col-xs-2 col-sm-offset-1 col-md-offset-2" style="margin-bottom: 20px;">
+                <img src="img/gzlogo.jpg">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-11 col-sm-offset-1
+            col-md-8 col-md-offset-2 text-center">
+                <p style="font-size: 15px;margin-bottom: 20px;padding: 10px">
+                    瓜子二手车，作为二手车交易平台，通过隐号宝的“中间号”，
+                    实现客服人员与买车人之间的沟通，即可保护车主的号码隐私，
+                    也可防止车主信息被竞争对手抓取，更好管控交易服务过程。</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-11 col-sm-offset-1 col-md-8 col-md-offset-2">
+                <img src="img/num-middle-gn4.png" class="img-responsive center-block">
+            </div>
         </div>
     </div>
 </div>
-
+<div class="ht40"></div>
 <!-------------咨询服务详情 start------------->
-<div class="ui-fullpart" style="background-image: url(img/footer_bg.jpg); height: 400px;padding:0;text-align: center">
-    <div class="ht55"></div>
-    <P class="text-p1">咨询服务详情</P>
-    <p class="text-p1">请致电或在线问询售前顾问</p>
-    <div class="ht40"></div>
-    <div class="hgroup" style="top: 80%">
-        <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();;return false;" class="bluebg"><img
-                src="img/ico-xx.png" alt=""> 在线咨询</a>
-        <a href="javascript:void(0)" onclick="alertTip()" class="bluebg"><img
-                src="img/ico-phon.png" alt=""> 电话咨询</a>
+<div class="ui-fullpart consultFullpart">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <div class="ht55"></div>
+                <P class="text-p1">咨询服务详情</P>
+                <p class="text-p1">请致电或在线问询售前顾问</p>
+                <div class="ht40"></div>
+                <div class="hgroup" style="top: 80%">
+                    <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();
+                    return false;" class="bluebg"><img
+                            src="img/ico-xx.png" alt=""> 在线咨询</a>
+                    <a href="javascript:void(0)" onclick="alertTip()" class="bluebg">
+                        <img src="img/ico-phon.png" alt="">
+                        电话咨询
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
 <!--电话咨询弹窗 start-->
 <div id="Dialog-con" >
     <div class="custom_banner_text">
@@ -246,33 +272,84 @@
 <!-------------------------------------- 尾部开始 -------------------------------------->
 <div id="footeri">
     <div class="container">
-        <div class="info">
-            <div class="ht20"></div>
-            <p>
-                <a href="chanpi/gongsijianjie.html">首页 </a>
-                <span>|</span>
-                <a href="chanpi/lianxiwomen.html"> 业务模式 </a>
-                <span>|</span>
-                <a href="chanpi/lianxiwomen.html"> 应用场景 </a>
-                <span>|</span>
-                <a href="chanpi/lianxiwomen.html"> 关于我们 </a>
-            </p>
-            <div class="ht25"></div>
-            <p>2011-2017 北京云讯科技有限公司 京ICP备14002087号-7</p>
+        <div class="row">
+            <div class="col-xs-12 col-sm-9 col-md-6 col-md-offset-2">
+                <div class="row">
+                    <div class="col-xs-12 text-center" style="margin-top:20px">
+                        <p>
+                            <a href="index.html">首页 </a>
+                            <span>|</span>
+                            <a href="num-middle.html"> 业务模式 </a>
+                            <span>|</span>
+                            <a href="application-scene.html"> 应用场景 </a>
+                            <span>|</span>
+                            <a href="experience.html"> 体验中心 </a>
+                            <span>|</span>
+                            <a href="about-us.html"> 关于我们 </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 text-center" style="margin: 20px 0">
+                        <p class="BatchNum">2011-2017 北京云讯科技有限公司 京ICP备14002087号-7</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <img src="img/footer_erweima.png" class="img-responsive center-block">
+            </div>
         </div>
-        <div class="qr"><img src="img/footer_erweima.png" alt=""></div>
     </div>
 </div>
 <!-------------------------------------- 尾部结束-------------------------------------->
-<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="js/numberhidden.js"></script>
 <script>
-    //导航栏隐藏部分
-    $(document).ready(function() {
-        $(".menu_li2").hover(function(){
-            $(".dropdown-menu_li1").show();
-        },function(){
-            $(".dropdown-menu_li1").hide();
+    $(function(){
+        var x=true;
+        //顶部导航栏自动跟随
+        t = $('header').offset().top;
+        fh = $('header').height();
+        $(window).scroll(function(e) {
+            s = $(document).scrollTop();
+            if (s > 1) {
+                $('header').css('position', 'fixed');
+                $('header').css('top', '0');
+                $('header').css('left', '0');
+                $('header').css('background-color', '#000');
+                $('header').css('width', '100%');
+                $('header').css('text-align', 'center');
+            } else {
+                $('header').css('position', 'relative');
+
+            }
+        });
+        // 移动导航动画
+        $("#UpDown").click(function(){
+            $(".navi").stop().animate({
+                height:'toggle'
+            },300);
+        });
+        $(".hd>p").click(function(){
+            $(this).find(".Forward").toggle();
+            $(this).find(".dropDown").toggle();
+        });
+        // 点击导航业务
+        $("#business").click(function(){
+            $("#subm-2").stop().animate({
+                height:'toggle'
+            },300);
+        });
+        //点击应用场景
+        $("#application").click(function(){
+            $("#subm-3").stop().animate({
+                height:'toggle'
+            },300);
+        });
+        // 点击收回箭头
+        $(".m-xiangi").click(function(){
+            $(".navi").stop().animate({
+                height:'toggle'
+            },300);
         });
     });
 </script>

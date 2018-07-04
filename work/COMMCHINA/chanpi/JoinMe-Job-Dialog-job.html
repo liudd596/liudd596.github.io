@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>加入我们-招聘职位</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow" />
+    <link rel="shortcut icon" href="img/bitbug_favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-customize.css">
+    <style>
+        /*-----------------------------招聘职位  弹窗 ---------------------------*/
+    #Dialog-job{width: 300px;height: 360px;position: fixed;top:50%;left: 50%;z-index: 999;margin-left: -150px;margin-top: -200px;}
+    #Dialog-job .job-top{background: #e60012;height: 40px}
+    #Dialog-job .job-top h3{color: #FFFFFF;font-size: 24px;text-align: center;font-size: 24px;line-height: 40px;}
+    #Dialog-job .Dialog-jobIn .p1{font-size: 14px;color: #b4b4b4;text-align: center;margin: 10px auto}
+    #Dialog-job .Dialog-jobIn .group{position: relative;color: #FFFFFF;width:270px;height: 44px;margin: 0 auto}
+    #Dialog-job .Dialog-jobIn .group span{text-align: left;font-size: 16px;color: #000;line-height: 30px}
+    #Dialog-job .Dialog-jobIn .group input{display: block;font-size:16px;height: 30px;line-height: 30px;background:#fff; border:1px solid #c9c9c9;color: #333333;padding-left: 4px;width: 180px; float: right}
+
+    #Dialog-job .Dialog-jobIn .groupa{position: relative;color: #FFFFFF;width:280px;height: 44px;margin: 0 auto}#upload-form{display: inline-block}
+    #Dialog-job .Dialog-jobIn .groupa input{display: inline-block;font-size:16px;height: 30px;width: 180px;color: #000000;position: absolute; left: 88px;top: 4px}
+    #Dialog-job .Dialog-jobIn .groupa span{text-align: left;font-size: 16px;color: #000;line-height: 30px}
+    #Dialog-job .btn{width: 140px;height: 30px;background-color: #e60012;font-size: 18px;color: #FFFFFF;text-align: center;line-height: 10px;display: block;margin: 10px auto;}
+   .ui-dialog-close {
+    position: relative;
+    _position: absolute;
+    float: right;
+    top: -13px;
+    right: -13px;
+    _height: 26px;
+    padding: 0 4px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #FFF;
+    opacity: .2;
+    filter: alpha(opacity=20);
+    cursor: pointer;
+    background: transparent;
+    _background: #FFF;
+    border: 0;
+    -webkit-appearance: none;
+}
+     </style>
+</head>
+<body>
+<main style="background-color: #000;width:100%;height:100%">
+<div></div>
+    <div id="Dialog-job">
+       <!-- <div class="job-top">
+	     <!-- <button class="ui-dialog-close" onclick="closePop()">×</button>
+	      <h3>我 有 意 向</h3>
+        </div>-->
+        <div class="Dialog-jobIn">
+	        <p class="p1">
+		        请填写以下信息
+	        </p>
+	        <div class="group">
+		        <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span><input type="text" class="input2"/>
+	        </div>
+	        <div class="group">
+		        <span>应聘职位：</span><input type="text" class="input2"/>
+	        </div>
+	        <div class="group">
+		        <span>联系方式：</span><input type="text" class="input2"/>
+	        </div>
+	        <div class="group">
+		        <span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</span><input type="text" class="input2"/>
+	        </div>
+	        <div class="groupa">
+		        <span>上传简历：</span>
+		        <form id="upload-form" action="upload.php" method="post" enctype="multipart/form-data">
+			　　　        <input type="file" id="upload" name="upload">
+		        </form>
+	        </div>
+	        <div class="group">
+		        <span>说&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;明：</span><input type="text" class="input2"/>
+	        </div>
+        </div>
+        <button class="btn" onclick="jobseek()">提 交</button>
+    </div>
+</main>
+</body>
+</html>
+
+

@@ -1,0 +1,220 @@
+      /*    箭      头     动       效      */
+@keyframes achor_1{
+    0%{top:330px;left:320px;background-position:left 0px;opacity:1;}
+    20%{top:310px;left:350px;background-position:left 0px;opacity:1;}
+    20.5%{top:308px;left:352px;background-position:left -20px;opacity:1;}
+    68.5%{top:350px;left:428px;background-position:left -20px;opacity:1;}
+    69%{top:350px;left:429px;background-position:left 0px;opacity:1;}
+    89%{top:340px;left:460px;background-position:left 0px;opacity:1;}
+    89.1%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+    100%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+}
+@-moz-keyframes achor_1{
+    0%{top:330px;left:320px;background-position:left 0px;opacity:1;}
+    20%{top:310px;left:350px;background-position:left 0px;opacity:1;}
+    20.5%{top:308px;left:352px;background-position:left -20px;opacity:1;}
+    68.5%{top:350px;left:428px;background-position:left -20px;opacity:1;}
+    69%{top:350px;left:429px;background-position:left 0px;opacity:1;}
+    89%{top:340px;left:460px;background-position:left 0px;opacity:1;}
+    89.1%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+    100%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+}
+@-webkit-keyframes achor_1{
+    0%{top:330px;left:320px;background-position:left 0px;opacity:1;}
+    20%{top:310px;left:350px;background-position:left 0px;opacity:1;}
+    20.5%{top:308px;left:352px;background-position:left -20px;opacity:1;}
+    68.5%{top:350px;left:428px;background-position:left -20px;opacity:1;}
+    69%{top:350px;left:429px;background-position:left 0px;opacity:1;}
+    89%{top:340px;left:460px;background-position:left 0px;opacity:1;}
+    89.1%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+    100%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+}
+@-o-keyframes achor_1{
+    0%{top:330px;left:320px;background-position:left 0px;opacity:1;}
+    20%{top:310px;left:350px;background-position:left 0px;opacity:1;}
+    20.5%{top:308px;left:352px;background-position:left -20px;opacity:1;}
+    68.5%{top:350px;left:428px;background-position:left -20px;opacity:1;}
+    69%{top:350px;left:429px;background-position:left 0px;opacity:1;}
+    89%{top:340px;left:460px;background-position:left 0px;opacity:1;}
+    89.1%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+    100%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+}
+.move_1{
+    animation:achor_1 2.8s linear infinite;
+    -moz-animation:achor_1 2.8s linear infinite;
+    -webkit-animation:achor_1 2.8s linear infinite;
+    -o-animation:achor_1 2.8s linear infinite;
+}
+@keyframes achor_2{
+    0%{top:430px;left:480px;background-position:left 0px;opacity:1;}
+    20%{top:404px;left:526px;background-position:left 0px;opacity:1;}
+    20.5%{top:402px;left:524px;background-position:left -10px;opacity:1;}
+    68.5%{top:350px;left:428px;background-position:left -10px;opacity:1;}
+    69%{top:350px;left:428px;background-position:left 0px;opacity:1;}
+    89%{top:340px;left:460px;background-position:left 0px;opacity:1;}
+    89.1%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+    100%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+}
+@-moz-keyframes achor_2{
+    0%{top:430px;left:480px;background-position:left 0px;opacity:1;}
+    20%{top:404px;left:526px;background-position:left 0px;opacity:1;}
+    20.5%{top:402px;left:524px;background-position:left -10px;opacity:1;}
+    68.5%{top:350px;left:428px;background-position:left -10px;opacity:1;}
+    69%{top:350px;left:428px;background-position:left 0px;opacity:1;}
+    89%{top:340px;left:460px;background-position:left 0px;opacity:1;}
+    89.1%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+    100%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+}
+@-webkit-keyframes achor_2{
+    0%{top:430px;left:480px;background-position:left 0px;opacity:1;}
+    20%{top:404px;left:526px;background-position:left 0px;opacity:1;}
+    20.5%{top:402px;left:524px;background-position:left -10px;opacity:1;}
+    68.5%{top:350px;left:428px;background-position:left -10px;opacity:1;}
+    69%{top:350px;left:428px;background-position:left 0px;opacity:1;}
+    89%{top:340px;left:460px;background-position:left 0px;opacity:1;}
+    89.1%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+    100%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+}
+@-o-keyframes achor_2{
+    0%{top:430px;left:480px;background-position:left 0px;opacity:1;}
+    20%{top:404px;left:526px;background-position:left 0px;opacity:1;}
+    20.5%{top:402px;left:524px;background-position:left -10px;opacity:1;}
+    68.5%{top:350px;left:428px;background-position:left -10px;opacity:1;}
+    69%{top:350px;left:428px;background-position:left 0px;opacity:1;}
+    89%{top:340px;left:460px;background-position:left 0px;opacity:1;}
+    89.1%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+    100%{top:340px;left:466px;background-position:left 0px;opacity:0;}
+}
+.move_2{
+    animation:achor_2 3s linear 1s infinite;
+    -moz-animation:achor_2 3s linear 1s infinite;
+    -webkit-animation:achor_2 3s linear 1s infinite;
+    -o-animation:achor_2 3s linear 1s infinite;
+}
+@keyframes achor_3{
+    0%{top:290px;left:478px;background-position:left -20px;}
+    0.5%{top:290px;left:478px;background-position:left -20px;}
+    49.5%{top:330px;left:554px;background-position:left -20px;}
+    55.5%{top:330px;left:554px;background-position:left -10px;}
+    99.5%{top:290px;left:478px;background-position:left -10px;}
+    100%{top:290px;left:478px;background-position:left -10px;}
+}
+@-moz-keyframes achor_3{
+    0%{top:290px;left:478px;background-position:left -20px;}
+    0.5%{top:290px;left:478px;background-position:left -20px;}
+    49.5%{top:330px;left:554px;background-position:left -20px;}
+    55.5%{top:330px;left:554px;background-position:left -10px;}
+    99.5%{top:290px;left:478px;background-position:left -10px;}
+    100%{top:290px;left:478px;background-position:left -10px;}
+}
+@-webkit-keyframes achor_3{
+    0%{top:290px;left:478px;background-position:left -20px;}
+    0.5%{top:290px;left:478px;background-position:left -20px;}
+    49.5%{top:330px;left:554px;background-position:left -20px;}
+    55.5%{top:330px;left:554px;background-position:left -10px;}
+    99.5%{top:290px;left:478px;background-position:left -10px;}
+    100%{top:290px;left:478px;background-position:left -10px;}
+}
+@-o-keyframes achor_3{
+    0%{top:290px;left:478px;background-position:left -20px;}
+    0.5%{top:290px;left:478px;background-position:left -20px;}
+    49.5%{top:330px;left:554px;background-position:left -20px;}
+    55.5%{top:330px;left:554px;background-position:left -10px;}
+    99.5%{top:290px;left:478px;background-position:left -10px;}
+    100%{top:290px;left:478px;background-position:left -10px;}
+}
+.move_3{
+  animation:achor_3 3s linear infinite;
+  -moz-animation:achor_3 3s linear infinite;
+  -webkit-animation:achor_3 3s linear infinite;
+  -o-animation:achor_3 3s linear infinite;
+}
+@keyframes achor_4{
+    0%{top:238px;left:590px;opacity:1;}
+    0.5%{top:238px;left:590px;opacity:1;}
+    99.5%{top:176px;left:688px;opacity:1;}
+    100%{top:176px;left:688px;opacity:0;}
+}
+@-moz-keyframes achor_4{
+    0%{top:238px;left:590px;opacity:1;}
+    0.5%{top:238px;left:590px;opacity:1;}
+    99.5%{top:176px;left:688px;opacity:1;}
+    100%{top:176px;left:688px;opacity:0;}
+}
+@-webkit-keyframes achor_4{
+    0%{top:238px;left:590px;opacity:1;}
+    0.5%{top:238px;left:590px;opacity:1;}
+    99.5%{top:176px;left:688px;opacity:1;}
+    100%{top:176px;left:688px;opacity:0;}
+}
+@-o-keyframes  achor_4{
+    0%{top:238px;left:590px;opacity:1;}
+    0.5%{top:238px;left:590px;opacity:1;}
+    99.5%{top:176px;left:688px;opacity:1;}
+    100%{top:176px;left:688px;opacity:0;}
+}
+.move_4{
+  animation:achor_4 2s linear infinite;
+  -moz-animation:achor_4 2s linear infinite;
+  -webkit-animation:achor_4 2s linear infinite;
+  -o-animation:achor_4 2s linear infinite;
+}
+@keyframes achor_5{
+  0%{top:154px;left:708px;background-position:left -20px;}
+  0.5%{top:154px;left:708px;background-position:left -20px;}
+  49.5%{top:178px;left:748px;background-position:left -20px;}
+  55.5%{top:178px;left:748px;background-position:left -10px;}
+  99.5%{top:154px;left:708px;background-position:left -10px;}
+  100%{top:154px;left:708px;background-position:left -10px;}
+}
+@-moz-keyframes achor_5{
+    0%{top:154px;left:708px;background-position:left -20px;}
+    0.5%{top:154px;left:708px;background-position:left -20px;}
+    49.5%{top:178px;left:748px;background-position:left -20px;}
+    55.5%{top:178px;left:748px;background-position:left -10px;}
+    99.5%{top:154px;left:708px;background-position:left -10px;}
+    100%{top:154px;left:708px;background-position:left -10px;}
+}
+@-webkit-keyframes achor_5{
+    0%{top:154px;left:708px;background-position:left -20px;}
+    0.5%{top:154px;left:708px;background-position:left -20px;}
+    49.5%{top:178px;left:748px;background-position:left -20px;}
+    55.5%{top:178px;left:748px;background-position:left -10px;}
+    99.5%{top:154px;left:708px;background-position:left -10px;}
+    100%{top:154px;left:708px;background-position:left -10px;}
+}
+@-o-keyframes achor_5{
+    0%{top:154px;left:708px;background-position:left -20px;}
+    0.5%{top:154px;left:708px;background-position:left -20px;}
+    49.5%{top:178px;left:748px;background-position:left -20px;}
+    55.5%{top:178px;left:748px;background-position:left -10px;}
+    99.5%{top:154px;left:708px;background-position:left -10px;}
+    100%{top:154px;left:708px;background-position:left -10px;}
+}
+.move_5{
+  animation:achor_5 2s linear infinite;
+  -moz-animation:achor_5 2s linear infinite;
+  -webkit-animation:achor_5 2s linear infinite;
+  -o-animation:achor_5 2s linear infinite;
+}
+.ty-view-box{position: absolute;top: 0px;z-index: 10;width: 1300px; height:600px;margin: 0 auto;}
+.ty-view-arrow{width:13px;height:9px;font-size:0;position:absolute;z-index:10}
+.ty-view-arrow1{top:330px;left:320px;background:url(../images/index/ty-view-achor.png) no-repeat;background-position:left 0;}
+.ty-view-arrow2{top:430px;left:480px;background:url(../images/index/ty-view-achor.png) no-repeat;opacity:0;filter:alpha(opacity=0);background-position:left 0; }
+.ty-view-arrow3{top:290px;left:478px;background:url(../images/index/ty-view-achor.png) no-repeat;background-position:left -20px;}
+.ty-view-arrow4{top:238px;left:590px;background:url(../images/index/ty-view-achor.png) no-repeat;background-position:left 0;}
+.ty-view-arrow5{top:154px;left:708px;background:url(../images/index/ty-view-achor.png) no-repeat;background-position:left -20px;}
+
+.ty-view-app-div{width:244px;height:100px;margin-top:52px;cursor:pointer}
+
+
+
+
+
+
+
+
+
+
+
+

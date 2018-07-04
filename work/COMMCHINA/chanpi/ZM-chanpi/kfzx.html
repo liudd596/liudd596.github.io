@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+     <title>讯众通信咨询</title>
+    <meta name="keywords" content="呼叫中心系统,呼叫中心解决方案,营销外呼,外呼软件,客服软件,CRM管理系统,电话弹屏,智能IVR,网站客服系统,托管型呼叫中心,企业通讯解决方案,客户案例,讯众通信,讯众股份">
+    <meta name="description" content="众麦通信-营销型呼叫中心系统基于PSTN网和互联网相结合，让企业简单拥有呼入呼出、智能IVR、电话弹屏、客户资料管理、工单管理、座席质检、班组长坐席权限、录音下载、话单下载、统计报表功能。">
+    <meta name="robots" content="index, follow" />
+    <link rel="shortcut icon" href="../img/bitbug_favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-customize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/pages.css" />
+    <link rel="stylesheet" type="text/css" href="css/media.css" />
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="js/html5.js"></script>
+    <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://lead.soperson.com/10005095/10005350.js"></script>
+</head>
+<body>
+    <!-------------------------------------- 头部开始 -------------------------------------->
+    <div id="floating_window"></div>
+    <!--<div id="top"></div>-->
+    <header></header>
+    <div class="navi"></div>
+    <!-------------------------------------- 头部结束 -------------------------------------->
+    <!-------------------------------------- 内容开始 -------------------------------------->
+    <main>
+        <div class="ui-headview_custmer" style="background-color:#fafafa;"><i></i>
+            <div class="container">
+                <div class="ct">
+                    <div class="ban">
+                        <div class="ban-content">
+                            <p class="p_title">“400-681-2008”</p>
+                            <p class="p_cont">客服中心收到您的号码后会及时与您联系，欢迎体验！ </p>
+                            <form>
+                                <div class="int"><i class="people_ico"></i>
+                                    <input type="text" value="" id='sxhjsrc' placeholder="请输入您的手机号码" class="input_phon"/>
+                                   <!-- <p class="hidden_p1">*手机号码输入错误</p>-->
+                                </div>
+                                <div class="int Textbox-3">
+                                    <input type="text" placeholder="请输入验证码" id="sxhjyzm" class="kapkey" value="" />
+                                    <!--<img src="img/vcode.jpg"  title="" />-->
+                                    <a href="javascript:void(0);"><img id="clickthis" src="/validates.ashx?f=sxhj" style="border-radius: 4px;border: 1px solid #898989; background:#ccc" width="120" onclick="javascript:var rn=Math.random();this.src='/validates.ashx?f=sxhj&ra='+rn;" height="60"/></a>
+                                </div>
+                                <div class="sub">
+                                    <span class="sub_span">手机直接输入号码。如：1863216****；<br/>座机前加区号，如：0108858****；<br/>提交号码后，请您接听我们的来电 </span>
+                                    <input type="button" onclick="customser()" value="免费咨询" class="button">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="ban-content ban-content2">
+                            <p class="p_phon">您可以直接拨打 400-681-2008或 <span class="red">在线咨询</span></p>
+                            <input type="button"  value="在线咨询" onclick="doyoo.util.openChat('g=10005534');return false;" class="button_onlie">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+             <div class="CustmerHotbg"></div>
+        </div>
+       
+    </main>
+     <!-------------------------------------- 内容结束 -------------------------------------->
+    <!-------------------------------------- 尾部开始 -------------------------------------->
+    <div id="footer"> </div>
+    <footer></footer><div id="stickey_footer"></div>
+    <!-------------------------------------- 尾部开始 -------------------------------------->
+    <script src="js/topandfooter.js?version=1.0"></script>
+    <!----------------------移动端导航栏---------------->
+    <script src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/Topnav.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    function customser() {
+        alert("不好意思，请点击右侧的【在线咨询】，我们在维护中...");
+        return;
+        var src = $("#sxhjsrc").val();
+        var yzm = $("#sxhjyzm").val();
+        if (check(src) == false) {
+            alert(1);
+            return;
+        }
+        $.ajax({
+            url: "/doBackCall.ashx?method=sxhjtest",
+            type: "post",
+            traditional: true,
+            data: {
+                src: src,
+                yzm: yzm,
+                zx: 1
+            },
+            dataType: "json"
+        }).done(function(data) {
+            clickme("clickthis")
+            if (data.statusCode == "0") {
+                //                $("#regularyz").css("display", "block");
+                //                $("#phone_error").chanpi("提交成功");
+                alert("提交成功");
+
+            } else if (data.statusCode == "-2") {
+                //                $("#regularyz").css("display", "block");
+                //                $("#phone_error").chanpi(data.statusMsg);
+                alert(data.statusMsg);
+            } else if (data.statusCode == "-1") {
+                //                $("#yzmyz").css("display", "block");
+                //                $("#yzmerror").chanpi(data.statusMsg);
+                alert(data.statusMsg);
+            } else {
+                //                $("#regularyz").css("display", "block");
+                //                $("#phone_error").chanpi("提交失败");
+                alert("提交失败");
+            }
+        });
+
+    }
+    function check(src) {
+        var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+        if (!myreg.test(src)) {
+
+            //            $("#regularyz").css("display", "block");
+            //            $("#phone_error").chanpi("手机号码格式不正确，请重新输入");
+            return false;
+        }
+        // $("#regularyz").css("display", "none");
+        return true;
+
+    }
+    function clickme(dom) {
+        //IE
+        if (document.all) {
+            document.getElementById(dom).click();
+        }
+        // 其它浏览器
+        else {
+            var e = document.createEvent("MouseEvents");
+            e.initEvent("click", true, true);
+            document.getElementById(dom).dispatchEvent(e);
+        }
+    }
+    
+
+</script>
+
+

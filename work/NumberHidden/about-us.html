@@ -2,246 +2,391 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <meta name="renderer" content="webkit" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <title>集团业务-云通信PaaS</title>
+    <title>应用场景</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="robots" content="index, follow" />
-    <link rel="shortcut icon" href="img/bitbug_favicon.ico" />
+    <link rel="shortcut icon" href="img/bitbug_favicon48.ico" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-customize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css?v=1.2">
-     <link rel="stylesheet" type="text/css" href="css/pages.css?v=1.1">
-    <link rel="stylesheet" type="text/css" href="css/media.css?v=1.2">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/pages.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <script language="javascript" src="http://lzt.zoosnet.net/JS/LsJS.aspx?siteid=LZT19968005&float=1&lng=cn"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=xvN5DshwcH28jmtwZRWZp4oWRp9wlFGs"></script>
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <script>
+        var fun = function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
 
-    <script src="js/html5.js" type="text/javascript"></script>
+                    //这里是假设在640px宽度设计稿的情况下，1rem = 20px；
+                    //可以根据实际需要修改
+                    docEl.style.fontSize = 100 * (clientWidth /1920) + 'px';
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        }
+        fun(document, window);
+    </script>
+    <style>
+        /*------联系我们 ------------*/
+        .Tomap{position: relative;}
+        #allmap{width:100%;height:440px;margin: 20px auto 0px;border: 1px solid #cccccc;}
+        .float_img{
+            width: 280px;
+            height: 440px;
+            background-color: rgba(0, 160, 233, .89);
+            position: absolute;
+            z-index: 1;
+            right: 50px;
+        }
+        .float_img p{text-align: center;font-size: 16px;color: #ffffff;margin-top: 30px}
+        .float_img ul{margin-top: 50px;font-size: 16px;color: #ffffff;}
+        .float_img ul li{text-align: left;margin-top: 20px;padding: 0 10px;}
+    </style>
 </head>
 <body>
-<!-------------------------------------- 头部开始 -------------------------------------->
-<div id="floating_window"></div>
-<header></header>
-<div class="navi"></div>
+<header>
+    <div class="modal-backdrop"></div>
+    <!--右侧浮窗 start-->
+    <div id="floating_window">
+        <div class="infloating">
+            <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();;return false;" title="在线咨询"><div class="floating"><img src="img/floating1.jpg" alt=""/></div></a>
+            <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();;return false;" title="在线咨询"><div class="floating"><img src="img/floating2.jpg" alt=""/></div></a>
+            <a href="javascript:void(0)" onclick="alertTip()"><div class="floating"><img src="img/floating3.jpg" alt=""/></div></a>
+            <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();;return false;" title="在线咨询"><div class="floating"><img src="img/floating4.jpg" alt=""/></div></a>
+        </div>
+    </div>
+    <!--PC导航 start-->
+    <div class="container nav_menu">
+        <div class="logo"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li class="menu_li2">
+                    <a href="num-middle.html"><span>业务模式</span> <i class="ico menu_ico"></i></a>
+                    <div class="dropdown-menu_li1" style="display: none">
+                        <div class="hidden_content">
+                            <a href="num-middle.html"><span class="ico menu_ico_center1"></span><span>中间号</span></a>
+                            <a href="num-post.html"><span class="ico menu_ico_center2"></span><span>岗位号</span></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="application-scene.html"><span>应用场景</span></a></li>
+                <li><a href="experience.html"><span>体验中心</span></a></li>
+                <li><a href="about-us.html"><span>关于我们</span></a></li>
+            </ul>
+        </div>
+        <!-- 移动端菜单 -->
+        <a href="javascript:;" class="mbtn js-menu" id="UpDown"></a>
+    </div>
+</header>
+<!--移动导航 start-->
+<div class="navi">
+    <div class="mask"></div>
+    <div class="hd">
+        <p>
+            <a href="index.html">首页</a>
+            <i></i>
+        </p>
+        <p>
+            <a href="javascript:;" id="business">业务模式</a>
+            <i class="Forward" id="Forward1"></i>
+            <span class="dropDown" id="dropDown1"></span>
+        </p>
+        <div class="subm" id="subm-2">
+            <p><a href="num-middle.html">中间号</a></p>
+            <p><a href="num-post.html">岗位号</a></p>
+        </div>
+        <p>
+            <a href="javascript:;" id="application">应用场景</a>
+            <i class="Forward"></i>
+            <span class="dropDown"></span>
+        </p>
+        <div class="subm" id="subm-3">
+            <p><a href="application-scene.html">出行用车</a></p>
+            <p><a href="application-scene-fchzj.html">房产中介</a></p>
+            <p><a href="application-scene-wmai.html">外卖送餐</a></p>
+            <p><a href="application-scene-jypxun.html">教育培训</a></p>
+            <p><a href="application-scene-esjy.html">二手交易</a></p>
+            <p><a href="application-scene-qzhi.html">求职招聘</a></p>
+        </div>
+        <p>
+            <a href="experience.html">体验中心</a>
+            <i></i>
+        </p>
+        <p>
+            <a href="about-us.html">关于我们</a>
+            <i></i>
+        </p>
+        <p>
+            <a class="m-xiangq">查看更多详情，请打开电脑浏览器<br />“http://www.commchina.net/”</a>
+            <i class="m-xiangi"></i>
+        </p>
+    </div>
+</div>
 <!-------------------------------------- 头部结束 -------------------------------------->
 <!-------------------------------------- 内容开始 -------------------------------------->
-<div class="PC-con">
-    <main>
-        <div class="ui-headview" style="background-image: url(img/page_img/BG-cloudPass.jpg);"></div>
-        <div class="ui-fullpart">
-            <div class="container">
-                <div class="ui-title">
-                    <h3>产品简介</h3>
-                    <div class="ht20"></div>
-                    <span class="fz16">一站式云通信服务平台云通信开放平台，将互联网通信所需的能力（语音、流量、呼叫中心、短信等）打包成API和SDK接口，一站式提供给开发者，让各行各业的业务系统可以便捷、低成本接入通讯能力，降低开发者建设和使用通信能力的技术门槛和资金门槛。</span>
-                    <div class="ht30"></div>
-                    <img src="img/page_img/BG-cloudPassimg1.jpg" alt="" style=" width:66%"/>
+<div class="ui-headview" style="background-image: url(img/about-us.jpg);height: 560px;"></div>
+<!-------------简介------------>
+<div class="ui-fullpart" style="background-color: #fff;position: relative">
+    <div class="container">
+        <div class="row" style="margin: 30px 0px">
+            <div class="col-xs-12">
+                <h3 style="color: #333333;font-size: 24px;line-height: 40px">北京云讯科技有限公司</h3>
+                <p class="brief">
+                    北京云讯科技有限公司（简称云讯科技），成立于2010年，为讯众股份（股票代码832646）旗下全资子公司。
+                    云讯科技是国内首家提出云通讯概念的专业服务商，是建设第三代通讯服务模式的先行者。
+                </p>
+                <p class="brief">
+                    云讯科技致力于用通信资源和技术、解决企业营销服务难题：在IAAS层，为客户解决通信资源、线路等问题；
+                    在PAAS层，通过云通信开放平台，将语音、短信、流量以API/SDK/HTML5的形式对接到各类企业业务系统；
+                    在SaaS层，则为大中型客户提供标准化/定制化的产品和解决方案，包括安全隐号、智能语音机器人、
+                    大数据精准营销服务。云讯科技团队拥有卓越的通讯专业能力、云服务技术领域开发经验，强大的电信资源优势，
+                    以及良好的政府合作关系，以保证服务可以始终如一的稳定而高效。目前已积累5 万多家企业客户 ，
+                    服务客户包括中国工商银行、百度、腾讯、小米、滴滴、链家、51信用卡、玖富理财、猪八戒等诸多知名企业 ，
+                    每天近亿通讯资讯通过我们的平台，应用于各行业领域与场景。
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin: 30px 0px">
+            <div class="col-xs-12">
+                <div class="Tomap" id="about-con">
+                    <div class="float_img">
+                        <p style="text-align: left;margin-left: 20px;font-size: 24px">联系我们</p>
+                        <p style="text-align: left;margin-left: 20px;font-size: 16px;line-height: 30px">
+                            售前咨询：400-0707-600 <br />
+                            售后咨询：400-681-2008 <br />
+                            市场邮箱：market@ytx.net <br />
+                            服务邮箱：service@ytx.net <br />
+                            前台：010-8858 9900 <br />
+                            传真：010-88589900-8029 <br />
+                            邮编：100029 <br />
+                            地 址：北京市朝阳区广顺南大街<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16号索尼大厦25层 <br />
+                        </p>
+                    </div>
+                    <div class="contact_img" id="allmap"></div>
                 </div>
             </div>
         </div>
-        <div class="ui-fullpart" style="background: #eeeeee">
-            <div class="container">
-                <div class="ui-title">
-                    <h3>我们的服务</h3>
-                    <div class="ht30"></div>
-                </div>
-                <div class="ui-serve">
-                    <ul class="ul-zer">
-                        <li>
-                            <div class="ht70"></div>
-                            <h3>语音</h3>
-                            <div class="ht15"></div>
-                            <p class="fz16">稳定快速、通话清晰</p>
-                            <div class="ht80"></div>
-                            <div class="aa"><a href="YTX-chanpi/voice_inform.html">&nbsp;语音通知&nbsp;</a><a href="YTX-chanpi/voice_code.html">&nbsp;语音验证码&nbsp;</a><a href="YTX-chanpi/two-way_calls.html">&nbsp;双向呼叫&nbsp;</a><a href="YTX-chanpi/voice_calls.html">&nbsp;语音通话&nbsp;</a></div>
-                        </li>
-                        <li><img src="img/page_img/BG-cloudPassimg2.png" alt=""/></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="ui-fullpart">
-            <div class="container">
-                <div class="ui-title">
-                    <h3>应用场景</h3>
-                    <div class="ht30"></div>
-                </div>
-                <div class="ui-serve">
-                    <ul class="ul-zer">
-                        <li>
-                            <div class="ht50"></div>
-                            <img src="img/page_img/BG-cloudPassimg3.png" alt=""/>
-                        </li>
-                        <li>
-                            <div class="ht60"></div>
-                            <h3>短信</h3>
-                            <div class="ht15"></div>
-                            <p class="fz16">实时下发、五秒必达</p>
-                            <div class="ht80"></div>
-                            <div class="aa"><a href="YTX-chanpi/sms_notify.html">&nbsp;短信通知&nbsp;</a><a href="YTX-chanpi/verification_code.html">&nbsp;短信验证码&nbsp;</a></div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="ui-fullpart" style="background: #eeeeee">
-            <div class="container">
-                <div class="ui-serve">
-                    <ul class="ul-zer">
-                        <li>
-                            <div class="ht70"></div>
-                            <h3>流量</h3>
-                            <div class="ht15"></div>
-                            <p class="fz16">三网资源、即充即用</p>
-                            <div class="ht80"></div>
-                            <div class="aa"><a href="BG-cloudSaaS.html">&nbsp;流量银行&nbsp;</a><a href="BG-cloudSaaS.html">&nbsp;流量红包&nbsp;</a></div>
-                        </li>
-                        <li class="li-right" style=" margin-left:260px"><img src="img/page_img/BG-cloudPassimg4.png" alt=""/></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="ui-fullpart" style="background-image: url(img/page_img/88yuan-bg.jpg);height: 474px">
-             <div class="ht100"></div>
-             <div class="ht100"></div>
-             <div class="ht60"></div>
-             <div class="ui-tiyan"><a>立即接入</a></div>
-        </div>
-    </main>
-    <!-------------------------------------- 内容结束 -------------------------------------->
-    <!-------------------------------------- 尾部开始 -------------------------------------->
-    <div id="footer"></div>
+    </div>
 </div>
-
-<div class="M-con">
-    <div class="ui-headview" style="background-image: url(img/page_img/BG-cloudPass.jpg);"></div>
-   <!-- <div class="ui-headview" style="background-image: url(img/page_img/M-BG-cloudpaas.jpg);">
-        <div class="container">
-          <div class="ct">
-            <h3>云通信PaaS服务平台</h3>
-            <p>几行代码，沟通世界</p>
-          </div>
+<!-------------咨询服务详情 start------------->
+<div class="ui-fullpart consultFullpart">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <div class="ht55"></div>
+                <P class="text-p1">咨询服务详情</P>
+                <p class="text-p1">请致电或在线问询售前顾问</p>
+                <div class="ht40"></div>
+                <div class="hgroup" style="top: 80%">
+                    <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();
+                    return false;" class="bluebg"><img
+                            src="img/ico-xx.png" alt=""> 在线咨询</a>
+                    <a href="javascript:void(0)" onclick="alertTip()" class="bluebg">
+                        <img src="img/ico-phon.png" alt="">
+                        电话咨询
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>-->
-    <div class="Mui-fullpart">
-       <div class="M-content">
-          <div class="ui-title">
-            <h3>产品简介</h3>
-          </div>
-          <p class="M-conp">讯众·云通信“隐号宝”，在为企业客户提供基础语音通信服务的同时，可有效保护企业终端用户的号码隐私，防止出现后续电话骚扰，并且可以防止企业重要信息被抓取（跳单）或发生泄露。</p>
-          <div class="ht30"></div>
-          <img src="img/page_img/BG-cloudPassimg1.jpg" alt="" style=" width:90%; margin:0 auto; display:block"/>
-       </div>
-     </div>
-    <div class="Mui-fullpart">
-       <div class="M-content">
-          <div class="ui-title">
-            <h3>我们的服务</h3>
-          </div>
-          <div class="ui-serve">
-                <ul class="ul-zer" style=" width:100%;">
-                    <li>
-                        <h3>语音</h3>
-                        <div class="ht15"></div>
-                        <p class="fz16">稳定快速、通话清晰</p>
-                        <div class="aa"><a href="YTX-chanpi/voice_inform.html">语音通知&nbsp;</a><a href="YTX-chanpi/voice_code.html">语音验证码&nbsp;</a><br /><a href="YTX-chanpi/two-way_calls.html">双向呼叫&nbsp;</a><a href="YTX-chanpi/voice_calls.html">语音通话&nbsp;</a></div>
-                    </li>
-                    <li><img src="img/page_img/BG-cloudPassimg2.png" alt="" style=" width:80%;"/></li>
-                </ul>
-                
-          </div>
-          <div class="ui-serve">
-                 <ul class="ul-zer" style=" width:100%;">
-                    <li><img src="img/page_img/BG-cloudPassimg3.png" alt="" style=" width:100%; position:relative; top:20px"/></li>
-                    <li>
-                        <h3>短信</h3>
-                        <div class="ht15"></div>
-                        <p class="fz16">实时下发、五秒必达</p>
-                         <div class="aa"><a href="YTX-chanpi/sms_notify.html">短信通知&nbsp;</a><a href="YTX-chanpi/verification_code.html">短信验证码&nbsp;</a></div>
-                    </li>
-                </ul>
-          </div>
-          <div class="ui-serve">
-                <ul class="ul-zer" style=" width:100%;">
-                    <li>
-                        <h3>流量</h3>
-                        <div class="ht15"></div>
-                        <p class="fz16">三网资源、即充即用</p>
-                        <div class="aa"><a href="BG-cloudSaaS.html">流量银行&nbsp;</a><a href="BG-cloudSaaS.html">流量红包&nbsp;</a></div>
-                    </li>
-                    <li><img src="img/page_img/BG-cloudPassimg4.png" alt="" style=" width:80%;"/></li>
-                </ul>
-                
-          </div>
-          <div class="clearfix"></div>
-       </div>
-     </div>
-     
-     <div class="Mui-fullpart" style="padding: 10px 0;">
-       <a href=""><div class="M-contents M-conpaas" style="background: url(img/page_img/M-BG-cloudSaaS.jpg) no-repeat center;background-size: cover; "></div></a>
-     </div>
+    </div>
 </div>
-<footer></footer>
-<div id="stickey_footer"></div>
+<!--电话咨询弹窗 start-->
+<div id="Dialog-con" >
+    <div class="custom_banner_text">
+        <button class="ui-dialog-close2" onclick="closePop()">×</button>
+        <div class="text1" style="margin-top: 20px;">
+            <h2> 在线客服</h2>
+            <h3>“400-0707-600”</h3>
+            <div class="div1"></div>
+            <p class="ban_p">客服中心收到您的号码后会及时与您联系，欢迎体验！</p>
+            <form id="userInfoFrm" name="userInfoFrm" method="post">
+                <div class="group">
+                    <div class="error" id="regularyz" style="display: none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="phone_error">手机号码格式不正确，请重新输入</span></div>
+                    <input type="text" name="" id="sxhjsrc" class="input1 border-red" placeholder="请输入您的手机号码" onblur="return check(this)">
+                    <i class="num"></i>
+                </div>
+                <div class="group">
+                    <div class="error" style=" margin-top:10px;display: none" id="yzmyz" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="yzmerror">验证码不正确，请重新输入</span></div>
+                    <input type="text" name="imgCode" class="input2" id="sxhjyzm" placeholder="请输入验证码" style=" margin-top:10px;">
+                    <span id="sxhj"></span>
+                </div>
+                <div class="item">
+                    <p class="fl">手机直接输入号码。如：1863216****；<br>
+                        座机前加区号，如：0108858****；<br>
+                        提交号码后，请您接收到我们的回电</p>
+                    <a class="btn_join fr" onclick="sxhj()">免费咨询</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--电话咨询弹窗 end-->
+<!-------------------------------------- 内容结束 -------------------------------------->
 <!-------------------------------------- 尾部开始 -------------------------------------->
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/topandfooter.js?v=1.4"></script>
-<!----------------------移动端导航栏---------------->
-    <script src="js/main.js?v=1.1"></script>
-<script>
-    //顶部导航栏自动跟随
-    t = $('header').offset().top;
-    fh = $('header').height();
-    $(window).scroll(function(e) {
-        s = $(document).scrollTop();
-        if (s > 1) {
-            $('header').css('position', 'fixed');
-            $('header').css('top', '0');
-            $('header').css('left', '0');
-            $('header').css('background-color', '#fff');
-            $('header').css('width', '100%');
-            $('header').css('text-align', 'center');
-        } else {
-            $('header').css('position', 'relative');
+<div id="footeri">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-9 col-md-6 col-md-offset-2">
+                <div class="row">
+                    <div class="col-xs-12 text-center" style="margin-top:20px">
+                        <p>
+                            <a href="index.html">首页 </a>
+                            <span>|</span>
+                            <a href="num-middle.html"> 业务模式 </a>
+                            <span>|</span>
+                            <a href="application-scene.html"> 应用场景 </a>
+                            <span>|</span>
+                            <a href="experience.html"> 体验中心 </a>
+                            <span>|</span>
+                            <a href="about-us.html"> 关于我们 </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 text-center" style="margin: 20px 0">
+                        <p class="BatchNum">2011-2017 北京云讯科技有限公司 京ICP备14002087号-7</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <img src="img/footer_erweima.png" class="img-responsive center-block">
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------------------------------- 尾部结束-------------------------------------->
+<script type="text/javascript" src="js/numberhidden.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var x=true;
+        //顶部导航栏自动跟随
+        t = $('header').offset().top;
+        fh = $('header').height();
+        $(window).scroll(function(e) {
+            s = $(document).scrollTop();
+            if (s > 1) {
+                $('header').css('position', 'fixed');
+                $('header').css('top', '0');
+                $('header').css('left', '0');
+                $('header').css('background-color', '#000');
+                $('header').css('width', '100%');
+                $('header').css('text-align', 'center');
+            } else {
+                $('header').css('position', 'relative');
 
+            }
+        });
+        // 移动导航动画
+        $("#UpDown").click(function(){
+            $(".navi").stop().animate({
+                height:'toggle'
+            },300);
+        });
+        $(".hd>p").click(function(){
+            $(this).find(".Forward").toggle();
+            $(this).find(".dropDown").toggle();
+        });
+        // 点击导航业务
+        $("#business").click(function(){
+            $("#subm-2").stop().animate({
+                height:'toggle'
+            },300);
+        });
+        //点击应用场景
+        $("#application").click(function(){
+            $("#subm-3").stop().animate({
+                height:'toggle'
+            },300);
+        });
+        // 点击收回箭头
+        $(".m-xiangi").click(function(){
+            $(".navi").stop().animate({
+                height:'toggle'
+            },300);
+        });
+
+
+        //创建和初始化地图函数：
+        function initMap() {
+            createMap(); //创建地图
+            setMapEvent(); //设置地图事件
+            addMapControl(); //向地图添加控件
+            addMapOverlay(); //向地图添加覆盖物
         }
-    });
-    //导航栏隐藏部分
-    $(document).ready(function() {
-        $(".menu_li1").hover(function() {
-            $(".menu_box1").show();
-        }, function() {
-            $(".menu_box1").hide();
-        });
-        $(".menu_li2").hover(function() {
-            $(".menu_box2").show();
-        }, function() {
-            $(".menu_box2").hide();
-        });
-        $(".menu_li3").hover(function() {
-            $(".menu_box3").show();
-        }, function() {
-            $(".menu_box3").hide();
-        });
-        $(".menu_li4").hover(function() {
-            $(".menu_box4").show();
-        }, function() {
-            $(".menu_box4").hide();
-        });
-        $(".menu_li5").hover(function() {
-            $(".menu_box5").show();
-        }, function() {
-            $(".menu_box5").hide();
-        });
-        $(".menu_li6").hover(function() {
-            $(".menu_box6").show();
-        }, function() {
-            $(".menu_box6").hide();
-        });
+        function createMap() {
+            map = new BMap.Map("allmap");
+            map.centerAndZoom(new BMap.Point(116.487861,39.992756), 15);
+        }
+        function setMapEvent() {
+            map.enableScrollWheelZoom();
+            map.enableKeyboard();
+            map.enableDragging();
+            map.enableDoubleClickZoom()
+        }
+        function addClickHandler(target, window) {
+            target.addEventListener("click", function() {
+                target.openInfoWindow(window);
+            });
+        }
+        function addMapOverlay() {
+            var markers = [
+                {
+                    content: "北京市朝阳区广顺南大街16号索尼大厦25层",
+                    title: "北京讯众通信技术股份有限公司",
+                    imageOffset: {
+                        width: 0,
+                        height: 3
+                    }, position: {
+                        lat: 39.991871,
+                        lng: 116.487861}
+                }
+            ];
+            for (var index = 0; index < markers.length; index++) {
+                var point = new BMap.Point(markers[index].position.lng, markers[index].position.lat);
+                var marker = new BMap.Marker(point, {
+                    icon: new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",
+                        new BMap.Size(20, 25), {
+                        imageOffset: new BMap.Size(markers[index].imageOffset.width, markers[index].imageOffset.height)
+                    })
+                });
+                var label = new BMap.Label("", { offset: new BMap.Size(25, 5) });
+                var opts = {
+                    width: 200,
+                    title: markers[index].title,
+                    enableMessage: false
+                };
+                var infoWindow = new BMap.InfoWindow(markers[index].content, opts);
+                // marker.setLabel(label);
+                addClickHandler(marker, infoWindow);
+                map.addOverlay(marker);
+                map.openInfoWindow(infoWindow,point);
+            };
+        }
+        //向地图添加控件
+        function addMapControl() {
+            var scaleControl = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+            scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+            map.addControl(scaleControl);
+            var navControl = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+            map.addControl(navControl);
+            var overviewControl = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: true });
+            map.addControl(overviewControl);
+        }
+        var map;
+        initMap();
     });
 </script>
 </body>
 </html>
-
-

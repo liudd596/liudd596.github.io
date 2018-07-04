@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>应用场景</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow" />
+    <link rel="shortcut icon" href="img/bitbug_favicon48.ico" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-customize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/pages.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <script language="javascript" src="http://lzt.zoosnet.net/JS/LsJS.aspx?siteid=LZT19968005&float=1&lng=cn"></script>
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <script>
+        var fun = function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+
+                    //这里是假设在640px宽度设计稿的情况下，1rem = 20px；
+                    //可以根据实际需要修改
+                    docEl.style.fontSize = 100 * (clientWidth /1920) + 'px';
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        }
+        fun(document, window);
+    </script>
+</head>
+<body>
+<header>
+    <div class="modal-backdrop"></div>
+    <!--右侧浮窗 start-->
+    <div id="floating_window">
+        <div class="infloating">
+            <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();;return false;" title="在线咨询"><div class="floating"><img src="img/floating1.jpg" alt=""/></div></a>
+            <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();;return false;" title="在线咨询"><div class="floating"><img src="img/floating2.jpg" alt=""/></div></a>
+            <a href="javascript:void(0)" onclick="alertTip()"><div class="floating"><img src="img/floating3.jpg" alt=""/></div></a>
+            <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();;return false;" title="在线咨询"><div class="floating"><img src="img/floating4.jpg" alt=""/></div></a>
+        </div>
+    </div>
+    <!--PC导航 start-->
+    <div class="container nav_menu">
+        <div class="logo"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li class="menu_li2">
+                    <a href="num-middle.html"><span>业务模式</span> <i class="ico menu_ico"></i></a>
+                    <div class="dropdown-menu_li1" style="display: none">
+                        <div class="hidden_content">
+                            <a href="num-middle.html"><span class="ico menu_ico_center1"></span><span>中间号</span></a>
+                            <a href="num-post.html"><span class="ico menu_ico_center2"></span><span>岗位号</span></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="application-scene.html"><span>应用场景</span></a></li>
+                <li><a href="experience.html"><span>体验中心</span></a></li>
+                <li><a href="about-us.html"><span>关于我们</span></a></li>
+            </ul>
+        </div>
+        <!-- 移动端菜单 -->
+        <a href="javascript:;" class="mbtn js-menu" id="UpDown"></a>
+    </div>
+</header>
+<!--移动导航 start-->
+<div class="navi">
+    <div class="mask"></div>
+    <div class="hd">
+        <p>
+            <a href="index.html">首页</a>
+            <i></i>
+        </p>
+        <p>
+            <a href="javascript:;" id="business">业务模式</a>
+            <i class="Forward" id="Forward1"></i>
+            <span class="dropDown" id="dropDown1"></span>
+        </p>
+        <div class="subm" id="subm-2">
+            <p><a href="num-middle.html">中间号</a></p>
+            <p><a href="num-post.html">岗位号</a></p>
+        </div>
+        <p>
+            <a href="javascript:;" id="application">应用场景</a>
+            <i class="Forward"></i>
+            <span class="dropDown"></span>
+        </p>
+        <div class="subm" id="subm-3">
+            <p><a href="application-scene.html">出行用车</a></p>
+            <p><a href="application-scene-fchzj.html">房产中介</a></p>
+            <p><a href="application-scene-wmai.html">外卖送餐</a></p>
+            <p><a href="application-scene-jypxun.html">教育培训</a></p>
+            <p><a href="application-scene-esjy.html">二手交易</a></p>
+            <p><a href="application-scene-qzhi.html">求职招聘</a></p>
+        </div>
+        <p>
+            <a href="experience.html">体验中心</a>
+            <i></i>
+        </p>
+        <p>
+            <a href="about-us.html">关于我们</a>
+            <i></i>
+        </p>
+        <p>
+            <a class="m-xiangq">查看更多详情，请打开电脑浏览器<br />“http://www.commchina.net/”</a>
+            <i class="m-xiangi"></i>
+        </p>
+    </div>
+</div>
+<!-------------------------------------- 头部结束 -------------------------------------->
+<!-------------------------------------- 内容开始 -------------------------------------->
+<div class="ui-headview" style="background-image: url(img/yycj-bg.jpg);height: 560px;"></div>
+<div class="ht20"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 contenLeft">
+            <div class="row">
+                <div class="col-xs-7 text-center">
+                    <ul class="verticalNav">
+                        <li>
+                            <a href="application-scene.html#chxyc">出行用车</a>
+                        </li>
+                        <li>
+                            <a href="application-scene-fchzj.html#fczj">房产中介</a>
+                        </li>
+                        <li>
+                            <a href="application-scene-wmai.html#wmai">外卖送餐</a>
+                        </li>
+                        <li>
+                            <a href="application-scene-jypxun.html#jypxun">教育培训</a>
+                        </li>
+                        <li>
+                            <a href="application-scene-esjy.html#esjy">二手交易</a>
+                        </li>
+                        <li class="NavActive">
+                            <a href="application-scene-qzhi.html#qzhi" class="aActive">求职招聘</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-8">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="contenH3">
+                        求职招聘
+                        <img src="img/qzhi-ico1.png" alt="">
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="contenH3">
+                        面临的问题
+                        <img src="img/posi-ico.png" alt="">
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="innerP">
+                        求职者及招聘方对自身的手机号隐私都有着较强的保密需求。
+                        同时对于平台来说，既需要让双方可以顺畅联系，
+                        也不希望将用户号码信息对外公布，防止用户数据被第三方获取。
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="contenH3">
+                        解决方案
+                        <img src="img/fa-ico.png" alt="">
+                    </h3>
+                </div>
+            </div>
+            <div class="row" style="margin:25px">
+                <div class="col-xs-2 col-sm-1">
+                    <img src="img/qzhi-ico2.png" class="center-block">
+                </div>
+                <div class="col-xs-10">
+                    <p  style="line-height: 45px;font-size: 16px;color: #00a0e9;">求职招聘应用场景</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="img/qzhi-con1.jpg" class="img-responsive center-block">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="img/qzhi-con2.png" class="img-responsive center-block">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ht55"></div>
+<!-------------咨询服务详情 start------------->
+<div class="ui-fullpart consultFullpart">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <div class="ht55"></div>
+                <P class="text-p1">咨询服务详情</P>
+                <p class="text-p1">请致电或在线问询售前顾问</p>
+                <div class="ht40"></div>
+                <div class="hgroup" style="top: 80%">
+                    <a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();
+                    return false;" class="bluebg"><img
+                            src="img/ico-xx.png" alt=""> 在线咨询</a>
+                    <a href="javascript:void(0)" onclick="alertTip()" class="bluebg">
+                        <img src="img/ico-phon.png" alt="">
+                        电话咨询
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--电话咨询弹窗 start-->
+<div id="Dialog-con" >
+    <div class="custom_banner_text">
+        <button class="ui-dialog-close2" onclick="closePop()">×</button>
+        <div class="text1" style="margin-top: 20px;">
+            <h2> 在线客服</h2>
+            <h3>“400-0707-600”</h3>
+            <div class="div1"></div>
+            <p class="ban_p">客服中心收到您的号码后会及时与您联系，欢迎体验！</p>
+            <form id="userInfoFrm" name="userInfoFrm" method="post">
+                <div class="group">
+                    <div class="error" id="regularyz" style="display: none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="phone_error">手机号码格式不正确，请重新输入</span></div>
+                    <input type="text" name="" id="sxhjsrc" class="input1 border-red" placeholder="请输入您的手机号码" onblur="return check(this)">
+                    <i class="num"></i>
+                </div>
+                <div class="group">
+                    <div class="error" style=" margin-top:10px;display: none" id="yzmyz" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="yzmerror">验证码不正确，请重新输入</span></div>
+                    <input type="text" name="imgCode" class="input2" id="sxhjyzm" placeholder="请输入验证码" style=" margin-top:10px;">
+                    <span id="sxhj"></span>
+                </div>
+                <div class="item">
+                    <p class="fl">手机直接输入号码。如：1863216****；<br>
+                        座机前加区号，如：0108858****；<br>
+                        提交号码后，请您接收到我们的回电</p>
+                    <a class="btn_join fr" onclick="sxhj()">免费咨询</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--电话咨询弹窗 end-->
+<!-------------------------------------- 内容结束 -------------------------------------->
+<!-------------------------------------- 尾部开始 -------------------------------------->
+<div id="footeri">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-9 col-md-6 col-md-offset-2">
+                <div class="row">
+                    <div class="col-xs-12 text-center" style="margin-top:20px">
+                        <p>
+                            <a href="index.html">首页 </a>
+                            <span>|</span>
+                            <a href="num-middle.html"> 业务模式 </a>
+                            <span>|</span>
+                            <a href="application-scene.html"> 应用场景 </a>
+                            <span>|</span>
+                            <a href="experience.html"> 体验中心 </a>
+                            <span>|</span>
+                            <a href="about-us.html"> 关于我们 </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 text-center" style="margin: 20px 0">
+                        <p class="BatchNum">2011-2017 北京云讯科技有限公司 京ICP备14002087号-7</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <img src="img/footer_erweima.png" class="img-responsive center-block">
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------------------------------- 尾部结束-------------------------------------->
+<script type="text/javascript" src="js/numberhidden.js"></script>
+<script>
+    $(function(){
+        var x=true;
+        //顶部导航栏自动跟随
+        t = $('header').offset().top;
+        fh = $('header').height();
+        $(window).scroll(function(e) {
+            s = $(document).scrollTop();
+            if (s > 1) {
+                $('header').css('position', 'fixed');
+                $('header').css('top', '0');
+                $('header').css('left', '0');
+                $('header').css('background-color', '#000');
+                $('header').css('width', '100%');
+                $('header').css('text-align', 'center');
+            } else {
+                $('header').css('position', 'relative');
+
+            }
+        });
+        // 移动导航动画
+        $("#UpDown").click(function(){
+            $(".navi").stop().animate({
+                height:'toggle'
+            },300);
+        });
+        $(".hd>p").click(function(){
+            $(this).find(".Forward").toggle();
+            $(this).find(".dropDown").toggle();
+        });
+        // 点击导航业务
+        $("#business").click(function(){
+            $("#subm-2").stop().animate({
+                height:'toggle'
+            },300);
+        });
+        //点击应用场景
+        $("#application").click(function(){
+            $("#subm-3").stop().animate({
+                height:'toggle'
+            },300);
+        });
+        // 点击收回箭头
+        $(".m-xiangi").click(function(){
+            $(".navi").stop().animate({
+                height:'toggle'
+            },300);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>免费试用</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow" />
+    <link rel="shortcut icon" href="img/bitbug_favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-customize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/pages.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+</head>
+<body>
+<!-------------------------------------- 头部开始 -------------------------------------->
+<div id="floating_window"></div>
+<header></header>
+<div class="navi"></div>
+<!-------------------------------------- 头部结束 -------------------------------------->
+<!-------------------------------------- 内容开始 -------------------------------------->
+<main>
+    <div class="ui-fullpart-bgccc">
+        <div class="container loginfree">
+            <div class="ui-block">
+                 <div class="ui-block-title">
+                     <a href="LoginFree.html" target="_blank"><span class="red fz16">免费试用</span></a>
+                    <!-- <a href="LoginAgent.html" target="_blank">代理商登录</a>
+                     <a href="LoginUse.html" target="_blank">用户登录</a>-->
+                 </div>
+                <div class="ht30"></div>
+                <div class="ui-block-con">
+                    <h3>免费试用</h3>
+                    <div class="ban-content">
+                        <form>
+                            <div class="int">
+                                <span class="int_span">公司名称:</span>
+                                <input type="text" id="txtCompName" value="" placeholder="请输入您的公司名称"/><i></i>
+                            </div>
+                            <div class="int">
+                                <span  class="int_span">申请人:</span>
+                                <input  type="text" id="txtContactor" value="" placeholder="请输入您的名称"/><i></i>
+                            </div>
+                            <div class="int">
+                                <span  class="int_span">手机号码:</span>
+                                <input type="text" value="" id="txtMobile"  placeholder="请输入您的手机号码"/><i></i>
+                            </div>
+                            <div class="int">
+                                <span  class="int_span">公司电话:</span>
+                                <input type="text" value="" id="txtPhone" placeholder="请输入您的公司电话" /><i></i>
+                                <!--<p class="int_p">您输入的手机号不正确</p>-->
+                            </div>
+                            <div class="int">
+                                <span  class="int_span">邮 箱:</span>
+                                <input  type="text" value="" id="txtMail" placeholder="请输入您的邮箱"/><i></i>
+                            </div>
+                            <div class="int Textbox-2">
+                                <p  class="int_span">感兴趣的产品:</p>
+                                <ul class="span_check">
+                                    <li><input  type="checkbox" name="spname" value="语音" />语 音</li>
+                                    <li><input  type="checkbox" name="spname" value="短信" />短 信</li>
+                                    <input  type="checkbox" name="spname" value="流量" />流 量
+                                    <input  type="checkbox" name="spname" value="呼叫中心" />呼叫中心
+                                    <input  type="checkbox" name="spname" value="智能语音" />智能语音
+                                    <input  type="checkbox" name="spname" value="电话会议" />电话会议
+                                    <input  type="checkbox" name="spname" value="智能语音" />隐 号 宝
+                                    <input  type="checkbox" name="spname" value="电话会议" />视频会议
+                                    <input  type="checkbox" name="spname" value="其他" />其他
+                                </ul>
+                            </div>
+                            <div class="int Textbox-3">
+                                <span class="int_span">验证码:</span>
+                                <input type="text" placeholder="请输入验证码" class="kapkey" value="" id="txtvalidecode" />
+                                <a href="javascript:void(0);">
+                                    <img id="clickthis" src="/validates.ashx?f=frtl" style="border-radius: 4px;border: 1px solid #898989; background:#ccc;" width="100" height="30" onclick="javascript:var rn=Math.random();this.src='/validates.ashx?f=frtl&ra='+rn;"/>
+                                </a>
+                            </div>
+                            <div class="sub">
+                                <input type="button" id="btnLogin" value="登 录" class="button"  onclick="checkForm();"/>
+                                <div class="sub-read">
+                                    <input  type="checkbox"  value="阅读" /><span> 阅读并同意《讯众平台协议条款》</span>
+                                </div>
+
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <img src="img/page_img/shadow.png" alt="" class="shadow"/>
+        </div>
+    </div>
+</main>
+<!-------------------------------------- 内容结束 -------------------------------------->
+<!-------------------------------------- 尾部开始 -------------------------------------->
+<div id="footer"></div>
+<footer></footer>
+ <div id="stickey_footer"></div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/topandfooter.js?version=1.0"></script>
+<!----------------------移动端导航栏---------------->
+    <script src="js/main.js"></script>
+<script>
+    /*--------------登录验证--------------*/
+    var pamail = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+    var phoneRegex = /(^((0\d{10,11}))$)|(^((13[0-9])|14[57]|17[07]|(15[0-9])|(18[0-9]))\d{8}$)/; //座机(0开头)or手机
+    var mobileRegex = /^((13[0-9])|14[57]|17[07]|(15[0-9])|(18[0-9]))\d{8}$/; //手机
+
+    function emailCheck(mail) {
+        if (!pamail.test(mail)) {
+            return false;
+        }
+        return pamail.test(mail);
+    }
+    function phoneCheck(phone) {
+
+        if (!phoneRegex.test(phone)) {
+            return false;
+        }
+        return phoneRegex.test(phone);
+    }
+    function mobileCheck(mobile) {
+
+        if (!mobileRegex.test(mobile)) {
+            return false;
+        }
+        return mobileRegex.test(mobile);
+    }
+    function clickme(dom) {
+        //IE
+        if (document.all) {
+            //alert("ie");
+            document.getElementById(dom).click();
+        }
+        // 其它浏览器
+        else {
+            //alert("qt");
+            var e = document.createEvent("MouseEvents");
+            e.initEvent("click", true, true);
+            document.getElementById(dom).dispatchEvent(e);
+        }
+    }
+    function hs() {
+        var s = document.getElementsByName("spname");
+        var s2 = "";
+        for (var i = 0; i < s.length; i++) {
+            if (s[i].checked) {
+                s2 += s[i].value + ',';
+            }
+        }
+        s2 = s2.substr(0, s2.length - 1);
+        return s2;
+    }
+    function checkForm() {
+        var compName = document.getElementById('txtCompName').value;
+        var contactor = document.getElementById('txtContactor').value;
+        var mobile = document.getElementById('txtMobile').value;
+        var mail = document.getElementById('txtMail').value;
+        var phone = document.getElementById('txtPhone').value;
+        var code = document.getElementById('txtvalidecode').value;
+        var spName = hs();
+        if (compName == "" || mobile == "" || contactor == "" || phone == "" || mail == "" || code == "") {
+            alert("必须填写完整!");
+            return false;
+        }
+        if (spName == "") {
+            alert("至少选一个产品吧!");
+            return false;
+        }
+        if (!mobileCheck(mobile)) {
+            alert("手机号码的格式不正确！");
+            return false;
+        }
+        if (!phoneCheck(phone)) {
+            alert("公司电话的格式不正确！");
+            return false;
+        }
+        if (!emailCheck(mail)) {
+            alert("邮箱的格式不正确！");
+            return false;
+        }
+        $.ajax({
+            url: "/doBackCall.ashx?method=freeTrialAdd",
+            type: "post",
+            traditional: true,
+            data: {
+                compName: compName,
+                contactor: contactor,
+                mobile: mobile,
+                mail: mail,
+                phone: phone,
+                code: code,
+                spName: spName
+            },
+            beforeSend: function(XMLHttpRequest) {
+                $(".jiazai_Dialog").show();
+                $(".modal-backdrop").show();
+            },
+            dataType: "json"
+        }).done(function(data) {
+            clickme("clickthis");
+            $(".jiazai_Dialog").hide();
+            $(".modal-backdrop").hide();
+            if (data.statusCode == "1") {
+                alert("提交成功");
+                document.getElementById('txtCompName').value = "";
+                document.getElementById('txtContactor').value = "";
+                document.getElementById('txtMobile').value = "";
+                document.getElementById('txtMail').value = "";
+                document.getElementById('txtPhone').value = "";
+                document.getElementById('txtvalidecode').value = "";
+                var s = document.getElementsByName("spname");
+                var s2 = "";
+                for (var i = 0; i < 7; i++) {
+                    s[i].checked = false;
+                }
+
+            } else if (data.statusCode == "-1") {
+                alert(data.statusMsg);
+            } else {
+                alert("提交失败");
+            }
+        });
+    }
+    //顶部导航栏自动跟随
+    t = $('header').offset().top;
+    fh = $('header').height();
+    $(window).scroll(function(e) {
+        s = $(document).scrollTop();
+        if (s > 1) {
+            $('header').css('position', 'fixed');
+            $('header').css('top', '0');
+            $('header').css('left', '0');
+            $('header').css('background-color', '#fff');
+            $('header').css('width', '100%');
+            $('header').css('text-align', 'center');
+        } else {
+            $('header').css('position', 'relative');
+
+        }
+    });
+    //导航栏隐藏部分
+    $(document).ready(function() {
+        $(".menu_li1").hover(function() {
+            $(".menu_box1").show();
+        }, function() {
+            $(".menu_box1").hide();
+        });
+        $(".menu_li2").hover(function() {
+            $(".menu_box2").show();
+        }, function() {
+            $(".menu_box2").hide();
+        });
+        $(".menu_li3").hover(function() {
+            $(".menu_box3").show();
+        }, function() {
+            $(".menu_box3").hide();
+        });
+        $(".menu_li4").hover(function() {
+            $(".menu_box4").show();
+        }, function() {
+            $(".menu_box4").hide();
+        });
+        $(".menu_li5").hover(function() {
+            $(".menu_box5").show();
+        }, function() {
+            $(".menu_box5").hide();
+        });
+        $(".menu_li6").hover(function() {
+            $(".menu_box6").show();
+        }, function() {
+            $(".menu_box6").hide();
+        });
+    });
+</script>
+<!-------------------------------------- 尾部结束 -------------------------------------->
+
+</body>
+</html>
+
+

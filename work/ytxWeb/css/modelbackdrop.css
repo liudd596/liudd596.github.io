@@ -1,0 +1,11 @@
+﻿@charset "utf-8";
+
+/* 登陆弹窗样式 */
+          .modal-backdrop{ display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-color: gray; opacity: 0.4; z-index: 1000;}  
+          .colorfont{ color:#fff;}
+          
+          /* 弹出视频样式 */
+         
+        .ui-dialog-header{border-bottom:0px}
+        .ui-dialog-title{padding:0px}
+        /*.ui-dialog-close{border: 2px solid #000;width:22px;height:22px;-moz-border-radius:30px;-webkit-border-radius:30px;border-radius:30px;text-align: center;vertical-align: middle;font-size: 16px;} */

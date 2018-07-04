@@ -1,0 +1,58 @@
+
+.modal-backdrop{ display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-color: gray; opacity: 0.4; z-index: 1000;}  
+
+#Free_banner{background: url("../images/common/free_experience.jpg") no-repeat scroll center center;margin-top: 80px;height: 740px}
+#Free_banner .inFree_banner{width: 1200px;margin: 0 auto;}
+#Free_banner .inFree_banner .Free_title .Free_title_li1{font-size: 60px;color: #FFFFFF;margin-left: 452px;padding-top: 250px}
+#Free_banner .inFree_banner .Free_title .Free_title_li2{font-size: 20px;color: #FFFFFF;margin-left: 518px;padding-top: 80px}
+
+#Free_content{background: url("../images/common/free_cont_bg.jpg") no-repeat scroll center center;height: 1014px}
+#Free_content .inFree_content{width: 1200px;margin: 0 auto;height: 1014px;}
+#Free_content .inFree_content ul{float: left;width: 260px;height: 300px;background-color: #FFFFFF;margin-left: 58px;margin-top: 70px;text-align: center;-webkit-border-radius: 10px;-moz-border-radius: 10px;-o-border-radius: 10px;border-radius: 10px;}
+#Free_content .inFree_content ol{margin-left: 86px;padding-top: 60px}
+#Free_content .inFree_content ul li:nth-child(1){font-size: 22px;color: #000000;font-weight: bold;margin-top: 20px;border-bottom: 1px solid #999999;width: 218px;margin-left: 20px;padding-bottom: 20px}
+#Free_content .inFree_content ul li img{margin-top: 10px}
+#Free_content .inFree_content ul li:nth-child(3){font-size: 14px;margin-top: 8px;color: #898989}
+#Free_content .inFree_content ul li:nth-child(4){font-size: 16px;color: #FFFFFF;background-color: #3ea3ff;width: 140px;height: 32px;-webkit-border-radius: 4px;-moz-border-radius: 4px;-o-border-radius: 4px;border-radius: 4px;line-height: 32px;margin-left: 58px;margin-top: 14px;cursor: pointer}
+#Free_content .inFree_content ul li:nth-child(4):hover{background-color: #00a4e6;}
+
+.content_Dialog1,.content_Dialog2,.content_Dialog3,.content_Dialog4,.content_Dialog5,.content_Dialog6,.step{width:600px;height:400px;background-color:#fff;position:fixed;top:50%;left:50%;margin-left:-300px;margin-top:-200px;z-index:9999;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;}
+.ui-dialog-close{background:transparent none repeat scroll 0 0;color:#000;cursor:pointer;float:right;font-weight:bold;line-height:1;opacity:0.2;padding:0 4px;position:relative;font-size:24px;top:10px}
+.content_Dialog .p1{font-size: 20px;color: #000;border-bottom: 2px solid #3ea3ff;width: 160px;text-align: center;padding-bottom: 20px;position:relative;top:40px;left:220px}
+.content_Dialog .group{position:relative;top:70px;left:100px;margin-top:14px}
+.content_Dialog .group .input1{width:240px;height:40px;font-size: 16px;color: #000;-webkit-border-radius: 4px;-moz-border-radius: 4px;-o-border-radius: 4px;border-radius: 4px;padding-left:16px;border: 1px solid #898989;}
+.content_Dialog .group .input2{width:120px;height:40px;font-size: 16px;color: #000;-webkit-border-radius: 4px;-moz-border-radius: 4px;-o-border-radius: 4px;border-radius: 4px;padding-left:16px;border: 1px solid #898989;}
+.content_Dialog .group span{margin-right:20px}
+.content_Dialog .group .span2{margin-left:16px}
+.content_Dialog .group .error{color:#ff0000;margin-left:90px;margin-top:4px}
+.error1{color:#ff0000;margin-left:90px;}
+.content_Dialog .group img{margin-top:2px;margin-left:16px}
+.content_Dialog  .btn{background-color: #3ea3ff;width:140px;height:32px;-webkit-border-radius: 4px;-moz-border-radius: 4px;-o-border-radius: 4px;border-radius: 4px;color:#fff;border:0px;font-size: 16px;position:relative;top:120px;left:230px}
+.content_Dialog  .btn:hover{background-color: #00a4e6;}
+.content_Dialog1,.content_Dialog6{height:600px;margin-top:-300px;}
+.content_Dialog1 .p2{font-size: 20px;color: #3ea3ff;position:relative;top:40px;left:60px;margin-top:40px}
+.content_Dialog1 .p3{font-size: 14px;color: #000;position:relative;top:40px;left:60px;line-height:20px;margin-top:8px}
+.content_Dialog1 .p3 span{margin-left:42px}
+.content_Dialog3{height:478px;margin-top:-239px;}
+.content_Dialog3 .p2{font-size: 20px;color: #000;position:relative;top:40px;text-align: center;margin-top:40px;}
+.content_Dialog3 .p3{font-size: 14px;color: #000;position:relative;top:40px;text-align: center;line-height:20px;margin-top:8px;}
+.content_Dialog4 .p2{font-size: 20px;color: #000;position:relative;top:40px;text-align: center;margin-top:40px;line-height:40px;}
+
+.content_Dialog2 .p1{width: 196px;text-align: center;left:200px}
+.content_Dialog5 .p1{width: 196px;text-align: center;left:200px}
+
+.content_Dialog6 .p2{font-size: 20px;color: #3ea3ff;position:relative;top:40px;left:60px;margin-top:40px}
+.content_Dialog6 .p3{font-size: 14px;color: #000;position:relative;top:40px;left:60px;line-height:20px;margin-top:8px}
+
+.step img{position:relative;top:80px;left:110px;}
+.step .btn{left:-150px;top:260px}
+.step2 .p1{width: 196px;text-align: center;left:200px}
+.step5 .p1{width: 196px;text-align: center;left:200px}
+
+
+
+
+
+
+
+
